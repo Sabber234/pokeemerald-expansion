@@ -2095,7 +2095,11 @@ LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection_1:
 
 LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection_2:
 # 1043 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+<<<<<<< HEAD
 	showmonpic SPECIES_KYOGRE, 10, 3
+=======
+	showmonpic SPECIES_OGERPON, 10, 3
+>>>>>>> 917cf5f59b (idk if this works)
 # 1044 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	msgbox LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection_Text_0, MSGBOX_YESNO
 # 1045 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
@@ -2117,7 +2121,11 @@ LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection_5:
 
 LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection_8:
 # 1049 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+<<<<<<< HEAD
 	givemon SPECIES_KYOGRE, 5, ITEM_ORAN_BERRY
+=======
+	givemon SPECIES_OGERPON, 5, ITEM_ORAN_BERRY
+>>>>>>> 917cf5f59b (idk if this works)
 # 1050 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 1051 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"

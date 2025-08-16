@@ -858,7 +858,11 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
+<<<<<<< HEAD
 #define ROUTE101_FLANNERY                  855
+=======
+#define TRAINER_FLANNERY_6                  855
+>>>>>>> 917cf5f59b (idk if this works)
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

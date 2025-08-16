@@ -417,6 +417,8 @@ AUTO_GEN_TARGETS += $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.
 
 AUTO_GEN_TARGETS += $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.pory'))
 
+AUTO_GEN_TARGETS += $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.pory'))
+
 # NOTE: Tools must have been built prior (FIXME)
 # so you can't really call this rule directly
 generated: $(AUTO_GEN_TARGETS)
@@ -452,6 +454,9 @@ generated: $(AUTO_GEN_TARGETS)
 %.rl:     %      ; $(GFX) $< $@
 data/%.inc: data/%.pory; $(SCRIPT) -i $< -o $@ -fc tools/poryscript/font_config.json -cc tools/poryscript/command_config.json
 
+<<<<<<< HEAD
+>>>>>>> 917cf5f59b (idk if this works)
+=======
 >>>>>>> 917cf5f59b (idk if this works)
 
 clean-generated:

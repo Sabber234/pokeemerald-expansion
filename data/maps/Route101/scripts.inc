@@ -599,33 +599,55 @@ Route101_Flannery_Battle::
 # 303 "data/maps/Route101/scripts.pory"
 	trainerbattle_single ROUTE101_FLANNERY, Route101_Flannery_Intro, Route101_Flannery_Outro, PostbattleScript_Flannery
 # 304 "data/maps/Route101/scripts.pory"
+<<<<<<< HEAD
 	lockall
 # 305 "data/maps/Route101/scripts.pory"
 	msgbox Route101_Flannery_Postbattle, MSGBOX_DEFAULT
 # 306 "data/maps/Route101/scripts.pory"
 	releaseall
+=======
+	msgbox Route101_Flannery_Postbattle, MSGBOX_DEFAULT
+>>>>>>> 917cf5f59b (idk if this works)
 	end
 
 
 PostbattleScript_Flannery::
+<<<<<<< HEAD
 # 323 "data/maps/Route101/scripts.pory"
 	giveitem ITEM_MEGA_RING, 1
 # 324 "data/maps/Route101/scripts.pory"
+=======
+# 321 "data/maps/Route101/scripts.pory"
+	giveitem ITEM_MEGA_RING, 1
+# 322 "data/maps/Route101/scripts.pory"
+>>>>>>> 917cf5f59b (idk if this works)
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	return
 
 
 Route101_Flannery_Intro::
+<<<<<<< HEAD
 # 310 "data/maps/Route101/scripts.pory"
+=======
+# 308 "data/maps/Route101/scripts.pory"
+>>>>>>> 917cf5f59b (idk if this works)
 	.string "I'm scouting out up-and-coming\n"
 	.string "trainers. Lemme see your starter!$"
 
 Route101_Flannery_Outro::
+<<<<<<< HEAD
 # 314 "data/maps/Route101/scripts.pory"
+=======
+# 312 "data/maps/Route101/scripts.pory"
+>>>>>>> 917cf5f59b (idk if this works)
 	.string "That's one flamin' hot Pokémon you got\n"
 	.string "there.$"
 
 Route101_Flannery_Postbattle::
+<<<<<<< HEAD
 # 318 "data/maps/Route101/scripts.pory"
+=======
+# 316 "data/maps/Route101/scripts.pory"
+>>>>>>> 917cf5f59b (idk if this works)
 	.string "Seriously, I'm getting all hot and\n"
 	.string "bothered over here.$"

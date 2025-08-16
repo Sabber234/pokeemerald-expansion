@@ -301,9 +301,13 @@ Route101_Text_RouteSign:
 
 script Route101_Flannery_Battle {
 	trainerbattle_single(ROUTE101_FLANNERY, Route101_Flannery_Intro, Route101_Flannery_Outro, PostbattleScript_Flannery)
+<<<<<<< HEAD
 	lockall
 	msgbox(Route101_Flannery_Postbattle, MSGBOX_DEFAULT)
 	releaseall
+=======
+	msgbox(Route101_Flannery_Postbattle, MSGBOX_DEFAULT)
+>>>>>>> 917cf5f59b (idk if this works)
 	end
 }
 
