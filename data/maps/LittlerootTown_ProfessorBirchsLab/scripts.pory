@@ -1040,13 +1040,13 @@ script LittleRootTown_ProfessorBirchsLab_EventScript_StarterMiddleSelection{
 script LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection{
     lockall
 	if(!flag(FLAG_RECEIVED_STARTER)){
-		showmonpic(SPECIES_OGERPON, 10, 3)
+		showmonpic(SPECIES_KYOGRE, 10, 3)
 		msgbox(format("Do you want to select Nacli?"), MSGBOX_YESNO)
 		if(var(VAR_RESULT) == NO) {
 			msgbox(format("I'll choose another Pokémon."))
 		}
 		if(var(VAR_RESULT) == YES) {
-			givemon(SPECIES_OGERPON, 5, ITEM_ORAN_BERRY) 
+			givemon(SPECIES_KYOGRE, 5, ITEM_ORAN_BERRY) 
 			playfanfare(MUS_OBTAIN_ITEM)
 			setflag(FLAG_RECEIVED_STARTERRIGHT)
 			removeobject(7)

@@ -42178,3 +42178,70 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16877
+    [DIFFICULTY_NORMAL][ROUTE101_FLANNERY] =
+    {
+#line 16878
+        .trainerName = _("FLANNERY"),
+#line 16880
+        .trainerPic = TRAINER_PIC_LEADER_FLANNERY,
+        .encounterMusic_gender =
+#line 16881
+F_TRAINER_FEMALE | 
+#line 16882
+            TRAINER_ENCOUNTER_MUSIC_COOL,
+#line 16883
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16884
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16886
+            .species = SPECIES_CHARCADET,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16889
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
+#line 16888
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16887
+            .lvl = 5,
+#line 16890
+            .ball = ITEM_BEAST_BALL,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16891
+                MOVE_EMBER,
+                MOVE_TACKLE,
+                MOVE_LEER,
+            },
+            },
+            {
+#line 16895
+            .species = SPECIES_SIZZLIPEDE,
+#line 16895
+            .gender = TRAINER_MON_FEMALE,
+#line 16895
+            .heldItem = ITEM_ORAN_BERRY,
+#line 16899
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16896
+            .ability = ABILITY_FLASH_FIRE,
+#line 16897
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+#line 16898
+            .teraType = TYPE_FIRE,
+            .moves = {
+#line 16899
+                MOVE_FLAME_WHEEL,
+                MOVE_SMOKESCREEN,
+                MOVE_DEFENSE_CURL,
+                MOVE_BUG_BITE,
+            },
+            },
+        },
+    },

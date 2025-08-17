@@ -599,29 +599,33 @@ Route101_Flannery_Battle::
 # 303 "data/maps/Route101/scripts.pory"
 	trainerbattle_single ROUTE101_FLANNERY, Route101_Flannery_Intro, Route101_Flannery_Outro, PostbattleScript_Flannery
 # 304 "data/maps/Route101/scripts.pory"
+	lockall
+# 305 "data/maps/Route101/scripts.pory"
 	msgbox Route101_Flannery_Postbattle, MSGBOX_DEFAULT
+# 306 "data/maps/Route101/scripts.pory"
+	releaseall
 	end
 
 
 PostbattleScript_Flannery::
-# 321 "data/maps/Route101/scripts.pory"
+# 323 "data/maps/Route101/scripts.pory"
 	giveitem ITEM_MEGA_RING, 1
-# 322 "data/maps/Route101/scripts.pory"
+# 324 "data/maps/Route101/scripts.pory"
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	return
 
 
 Route101_Flannery_Intro::
-# 308 "data/maps/Route101/scripts.pory"
+# 310 "data/maps/Route101/scripts.pory"
 	.string "I'm scouting out up-and-coming\n"
 	.string "trainers. Lemme see your starter!$"
 
 Route101_Flannery_Outro::
-# 312 "data/maps/Route101/scripts.pory"
+# 314 "data/maps/Route101/scripts.pory"
 	.string "That's one flamin' hot Pokémon you got\n"
 	.string "there.$"
 
 Route101_Flannery_Postbattle::
-# 316 "data/maps/Route101/scripts.pory"
+# 318 "data/maps/Route101/scripts.pory"
 	.string "Seriously, I'm getting all hot and\n"
 	.string "bothered over here.$"
