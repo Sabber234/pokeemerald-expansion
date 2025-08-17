@@ -600,18 +600,25 @@ Route101_Flannery_Battle::
 	trainerbattle_single ROUTE101_FLANNERY, Route101_Flannery_Intro, Route101_Flannery_Outro, PostbattleScript_Flannery
 # 304 "data/maps/Route101/scripts.pory"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 	lockall
 # 305 "data/maps/Route101/scripts.pory"
 	msgbox Route101_Flannery_Postbattle, MSGBOX_DEFAULT
 # 306 "data/maps/Route101/scripts.pory"
 	releaseall
+<<<<<<< HEAD
 =======
 	msgbox Route101_Flannery_Postbattle, MSGBOX_DEFAULT
 >>>>>>> 917cf5f59b (idk if this works)
+=======
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 	end
 
 
 PostbattleScript_Flannery::
+<<<<<<< HEAD
 <<<<<<< HEAD
 # 323 "data/maps/Route101/scripts.pory"
 	giveitem ITEM_MEGA_RING, 1
@@ -621,33 +628,50 @@ PostbattleScript_Flannery::
 	giveitem ITEM_MEGA_RING, 1
 # 322 "data/maps/Route101/scripts.pory"
 >>>>>>> 917cf5f59b (idk if this works)
+=======
+# 323 "data/maps/Route101/scripts.pory"
+	giveitem ITEM_MEGA_RING, 1
+# 324 "data/maps/Route101/scripts.pory"
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	return
 
 
 Route101_Flannery_Intro::
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 310 "data/maps/Route101/scripts.pory"
 =======
 # 308 "data/maps/Route101/scripts.pory"
 >>>>>>> 917cf5f59b (idk if this works)
+=======
+# 310 "data/maps/Route101/scripts.pory"
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 	.string "I'm scouting out up-and-coming\n"
 	.string "trainers. Lemme see your starter!$"
 
 Route101_Flannery_Outro::
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 314 "data/maps/Route101/scripts.pory"
 =======
 # 312 "data/maps/Route101/scripts.pory"
 >>>>>>> 917cf5f59b (idk if this works)
+=======
+# 314 "data/maps/Route101/scripts.pory"
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 	.string "That's one flamin' hot Pokémon you got\n"
 	.string "there.$"
 
 Route101_Flannery_Postbattle::
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 318 "data/maps/Route101/scripts.pory"
 =======
 # 316 "data/maps/Route101/scripts.pory"
 >>>>>>> 917cf5f59b (idk if this works)
+=======
+# 318 "data/maps/Route101/scripts.pory"
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 	.string "Seriously, I'm getting all hot and\n"
 	.string "bothered over here.$"

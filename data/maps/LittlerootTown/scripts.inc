@@ -315,7 +315,13 @@ LittlerootTown_EventScript_GoInsideWithMom::
 # 158 "data/maps/LittlerootTown/scripts.pory"
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 	hideplayer
+=======
+# 159 "data/maps/LittlerootTown/scripts.pory"
+	hideobjectat LOCALID_PLAYER, 0
+# 160 "data/maps/LittlerootTown/scripts.pory"
+>>>>>>> 0271bf45d4 (Finished video tutorial)
 =======
 # 159 "data/maps/LittlerootTown/scripts.pory"
 	hideobjectat LOCALID_PLAYER, 0
