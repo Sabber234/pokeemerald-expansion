@@ -525,6 +525,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
+    {gObjectEventPal_Zinnia,                OBJ_EVENT_PAL_TAG_ZINNIA},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -2269,6 +2270,24 @@ void RemoveFollowingPokemon(void)
         return;
     RemoveObjectEvent(objectEvent);
 }
+
+void PlayFollowerReturnAnimationNative(void)
+{
+    struct ObjectEvent *objEvent = GetFollowerObject();
+    struct Sprite *sprite;
+
+    if (objEvent == NULL)
+        return;
+
+    sprite = &gSprites[objEvent->spriteId];
+
+    // Clear current movement and start "enter Poké Ball" animation
+    ClearObjectEventMovement(objEvent, sprite);
+    ObjectEventSetSingleMovement(objEvent, sprite, MOVEMENT_ACTION_ENTER_POKEBALL);
+    objEvent->singleMovementActive = TRUE;
+    sprite->sTypeFuncId = 2;
+}
+
 
 // Determine whether follower *should* be visible
 bool32 IsFollowerVisible(void)

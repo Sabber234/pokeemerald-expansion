@@ -211,8 +211,14 @@ const u16 gTrainerPalette_Sailor[] = INCBIN_U16("graphics/trainers/front_pics/sa
 const u32 gTrainerFrontPic_MagmaAdmin[] = INCBIN_U32("graphics/trainers/front_pics/magma_admin.4bpp.lz");
 const u16 gTrainerPalette_MagmaAdmin[] = INCBIN_U16("graphics/trainers/front_pics/magma_admin.gbapal");
 
+const u32 gTrainerFrontPic_ZinniaCalm[] = INCBIN_U32("graphics/trainers/front_pics/zinnia_calm.4bpp.lz");
+const u16 gTrainerPalette_ZinniaCalm[] = INCBIN_U16("graphics/trainers/front_pics/zinnia_calm.gbapal");
+
 const u32 gTrainerFrontPic_Wally[] = INCBIN_U32("graphics/trainers/front_pics/wally.4bpp.lz");
 const u16 gTrainerPalette_Wally[] = INCBIN_U16("graphics/trainers/palettes/wally.gbapal");
+
+const u32 gTrainerFrontPic_ZinniaPumped[] = INCBIN_U32("graphics/trainers/front_pics/zinnia_pumped.4bpp.lz");
+const u16 gTrainerPalette_ZinniaPumped[] = INCBIN_U16("graphics/trainers/front_pics/zinnia_pumped.gbapal");
 
 const u32 gTrainerFrontPic_Brendan[] = INCBIN_U32("graphics/trainers/front_pics/brendan.4bpp.lz");
 const u16 gTrainerPalette_Brendan[] = INCBIN_U16("graphics/trainers/palettes/brendan.gbapal");
@@ -378,6 +384,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_TWINS, gTrainerFrontPic_Twins, gTrainerPalette_Twins),
     TRAINER_SPRITE(TRAINER_PIC_SAILOR, gTrainerFrontPic_Sailor, gTrainerPalette_Sailor),
     TRAINER_SPRITE(TRAINER_PIC_MAGMA_ADMIN, gTrainerFrontPic_MagmaAdmin, gTrainerPalette_MagmaAdmin),
+    TRAINER_SPRITE(TRAINER_PIC_ZINNIA_CALM, gTrainerFrontPic_ZinniaCalm, gTrainerPalette_ZinniaCalm),
+    TRAINER_SPRITE(TRAINER_PIC_ZINNIA_PUMPED, gTrainerFrontPic_ZinniaPumped, gTrainerPalette_ZinniaPumped),
     TRAINER_SPRITE(TRAINER_PIC_WALLY, gTrainerFrontPic_Wally, gTrainerPalette_Wally),
     TRAINER_SPRITE(TRAINER_PIC_BRENDAN, gTrainerFrontPic_Brendan, gTrainerPalette_Brendan),
     TRAINER_SPRITE(TRAINER_PIC_MAY, gTrainerFrontPic_May, gTrainerPalette_May),

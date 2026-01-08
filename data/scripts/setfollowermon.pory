@@ -1,0 +1,17 @@
+script SetFollowerMon {
+    lockall
+    msgbox("Will you walk with your POKéMON?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1) {
+        clearflag(FLAG_FOLLOWERS_DISABLED)
+        playse(SE_BALL_OPEN)
+        msgbox(format("Your POKèMON is now following you!"))
+    }
+    if(var(VAR_RESULT) == 0) {
+        setflag(FLAG_FOLLOWERS_DISABLED)
+        callnative(PlayFollowerReturnAnimationNative)
+        playse(SE_BALL_OPEN)
+        msgbox(format("Your POKéMON returned to its ball."))
+    }
+    callnative(UpdateFollowingPokemon)
+    releaseall
+}

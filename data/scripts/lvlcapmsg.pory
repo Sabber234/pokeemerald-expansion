@@ -1,0 +1,7 @@
+script lvlcapmsg {
+    lockall
+    playfanfare(MUS_LEVEL_UP)
+    msgbox("{COLOR RED}YOUR LEVEL CAP HAS INCREASED!")
+    waitfanfare
+    releaseall
+}

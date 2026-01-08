@@ -525,7 +525,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese, MSGBOX_DEFAULT
-	giveitem ITEM_POKE_BALL, 5
+	giveitem ITEM_POKE_BALL, 25
+	giveitem ITEM_RARE_CANDY
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
@@ -533,7 +534,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BrendanGotPokedexTooTakeThese, MSGBOX_DEFAULT
-	giveitem ITEM_POKE_BALL, 5
+	giveitem ITEM_POKE_BALL, 25
+	giveitem ITEM_RARE_CANDY
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1
@@ -993,110 +995,3 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
 `
-
-
-script LittleRootTown_ProfessorBirchsLab_EventScript_StarterLeftSelection{
-    lockall
-	if(!flag(FLAG_RECEIVED_STARTER)){
-		showmonpic(SPECIES_WALKING_WAKE, 10, 3)
-		msgbox(format("Do you want to select Tinkatink?"), MSGBOX_YESNO)
-		if(var(VAR_RESULT) == NO) {
-			msgbox(format("I'll choose another Pokémon."))
-		}
-		if(var(VAR_RESULT) == YES) {
-			givemon(SPECIES_WALKING_WAKE, 5, ITEM_ORAN_BERRY)
-			playfanfare(MUS_OBTAIN_ITEM)
-			setflag(FLAG_RECEIVED_STARTERLEFT)
-			removeobject(9)
-			setflag(FLAG_RECEIVED_STARTER)
-			setvar(VAR_STARTER_SELECTION_STATE, 2)
-		}
-		hidemonpic
-	}
-    releaseall
-}
-
-script LittleRootTown_ProfessorBirchsLab_EventScript_StarterMiddleSelection{
-    lockall
-	if(!flag(FLAG_RECEIVED_STARTER)){
-		showmonpic(SPECIES_IRON_VALIANT, 10, 3)
-		msgbox(format("Do you want to select Smoliv?"), MSGBOX_YESNO)
-		if(var(VAR_RESULT) == NO) {
-			msgbox(format("I'll choose another Pokémon."))
-		}
-		if(var(VAR_RESULT) == YES) {
-			givemon(SPECIES_IRON_VALIANT, 5, ITEM_ORAN_BERRY)
-			playfanfare(MUS_OBTAIN_ITEM)
-			setflag(FLAG_RECEIVED_STARTERMIDDLE)
-			removeobject(8)
-			setflag(FLAG_RECEIVED_STARTER)
-			setvar(VAR_STARTER_SELECTION_STATE, 2)
-		}
-		hidemonpic
-	}
-    releaseall
-}
-
-script LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection{
-    lockall
-	if(!flag(FLAG_RECEIVED_STARTER)){
-		showmonpic(SPECIES_KYOGRE, 10, 3)
-		msgbox(format("Do you want to select Nacli?"), MSGBOX_YESNO)
-		if(var(VAR_RESULT) == NO) {
-			msgbox(format("I'll choose another Pokémon."))
-		}
-		if(var(VAR_RESULT) == YES) {
-			givemon(SPECIES_KYOGRE, 5, ITEM_ORAN_BERRY) 
-			playfanfare(MUS_OBTAIN_ITEM)
-			setflag(FLAG_RECEIVED_STARTERRIGHT)
-			removeobject(7)
-			setflag(FLAG_RECEIVED_STARTER)
-			setvar(VAR_STARTER_SELECTION_STATE, 2)
-		}
-		hidemonpic
-	}
-    releaseall
-}      
-
-script ProfessorLab_Steven{
-	lockall
-	faceplayer
-	if(var(VAR_STARTER_SELECTION_STATE) > 1) {
-		msgbox(format("Please take good care of it."))
-	}
-	if (var(VAR_STARTER_SELECTION_STATE) == 1) {
-		msgbox(format("I caught them all myself, they are very rare!"))
-	}
-	if(var(VAR_STARTER_SELECTION_STATE) == 0) {
-		msgbox(format("Please take a Pokémon."))
-		setvar(VAR_STARTER_SELECTION_STATE, 1)
-	}
-	releaseall
-}
-
-script ProfessorLab_Trigger_PlayerAttemptsToLeave{
-	lockall
-	applymovement(10, Movement_ProfessorsLab_StevenStop)
-	waitmovement(10)
-	msgbox(format("Hey, wait!"))
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_ProfessorsLab_PlayerSurprised)
-	waitmovement(OBJ_EVENT_ID_PLAYER)
-	msgbox(format("You will need a Pokémon to start your journey."))
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_ProfessorsLab_StepUp)
-	waitmovement(OBJ_EVENT_ID_PLAYER)
-	releaseall
-}
-
-movement Movement_ProfessorsLab_PlayerSurprised {
-	emote_exclamation_mark
-	face_up
-}
-
-movement Movement_ProfessorsLab_StepUp {
-	walk_up
-}
-
-movement Movement_ProfessorsLab_StevenStop {
-	jump_in_place_down
-	jump_in_place_down
-}

@@ -50,6 +50,9 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
+extern u8 SetFollowerMon[];
+extern u8 HealParty[];
+
 // Menu actions
 enum
 {
@@ -68,6 +71,8 @@ enum
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
     MENU_ACTION_DEXNAV,
+    MENU_ACTION_SETFOLLOWERMON,
+    MENU_ACTION_HEALPARTY,
 };
 
 // Save status
@@ -105,6 +110,8 @@ static bool8 StartMenuSaveCallback(void);
 static bool8 StartMenuOptionCallback(void);
 static bool8 StartMenuExitCallback(void);
 static bool8 StartMenuSafariZoneRetireCallback(void);
+static bool8 StartMenuSetFollowerMonCallback(void);
+static bool8 StartMenuHealPartyCallback(void);
 static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
@@ -205,6 +212,9 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
     [MENU_ACTION_DEXNAV]          = {gText_MenuDexNav,  {.u8_void = StartMenuDexNavCallback}},
+    [MENU_ACTION_SETFOLLOWERMON]  = {gText_MenuSetFollowerMon, {.u8_void = StartMenuSetFollowerMonCallback}},
+    [MENU_ACTION_HEALPARTY]     = {gText_MenuHealParty, {.u8_void = StartMenuHealPartyCallback}}
+
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -347,7 +357,14 @@ static void BuildNormalStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
-    AddStartMenuAction(MENU_ACTION_EXIT);
+
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+        AddStartMenuAction(MENU_ACTION_HEALPARTY);
+
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+        AddStartMenuAction(MENU_ACTION_SETFOLLOWERMON);
+
+    //AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
 static void BuildDebugStartMenu(void)
@@ -651,7 +668,9 @@ static bool8 HandleStartMenuInput(void)
             && gMenuCallback != StartMenuExitCallback
             && gMenuCallback != StartMenuDebugCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
-            && gMenuCallback != StartMenuBattlePyramidRetireCallback)
+            && gMenuCallback != StartMenuBattlePyramidRetireCallback
+            && gMenuCallback != StartMenuSetFollowerMonCallback
+            && gMenuCallback != StartMenuHealPartyCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -797,6 +816,24 @@ static bool8 StartMenuDebugCallback(void)
     }
 
 return TRUE;
+}
+
+static bool8 StartMenuSetFollowerMonCallback(void)
+{
+    RemoveExtraStartMenuWindows();
+    HideStartMenu();
+    ScriptContext_SetupScript(SetFollowerMon);
+
+    return TRUE;
+}
+
+static bool8 StartMenuHealPartyCallback(void)
+{
+    RemoveExtraStartMenuWindows();
+    HideStartMenu();
+    ScriptContext_SetupScript(HealParty);
+
+    return TRUE;
 }
 
 static bool8 StartMenuSafariZoneRetireCallback(void)

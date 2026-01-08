@@ -1015,14 +1015,3 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
-
-script RandomWeather{
-    random(15)
-    while(var(VAR_RESULT) == 10 || var(VAR_RESULT) == 14) {
-        random(15)
-    }
-
-    setweather(VAR_RESULT)
-    doweather()
-    setvar(VAR_LITTLEROOT_WEATHER_STATE, 1)
-}

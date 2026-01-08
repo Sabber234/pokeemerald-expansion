@@ -1,0 +1,341 @@
+raw `FallarborTown_MoveRelearnersHouse_MapScripts::
+	.byte 0
+
+FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner::
+	lockall
+	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove::
+	checkitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon, MSGBOX_DEFAULT
+	special ChooseMonForMoveRelearner
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, FallarborTown_MoveRelearnersHouse_EventScript_CantTeachEgg
+	goto_if_eq VAR_0x8005, 0, FallarborTown_MoveRelearnersHouse_EventScript_NoMoveToTeachMon
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMove
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ChooseMove::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	goto_if_eq VAR_0x8004, 0, FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	msgbox FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale, MSGBOX_DEFAULT
+	removeitem ITEM_HEART_SCALE
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_NoMoveToTeachMon::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_CantTeachEgg::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg, MSGBOX_DEFAULT
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
+	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
+	.string "I'm the MOVE TUTOR.\p"
+	.string "I know all the moves that POKéMON\n"
+	.string "learn--every one of them--and I can\l"
+	.string "teach POKéMON those moves.\p"
+	.string "I can teach a move to a POKéMON\n"
+	.string "of yours if you'd like.\p"
+	.string "I'll do it for a HEART SCALE.\n"
+	.string "I'm collecting those now.$"
+
+FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
+	.string "Oh! That's it! That's an honest to\n"
+	.string "goodness HEART SCALE!\p"
+	.string "Let me guess, you want me to teach\n"
+	.string "a move?$"
+
+FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon:
+	.string "Which POKéMON needs tutoring?$"
+
+FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
+	.string "Which move should I teach?$"
+
+FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
+	.string "Sorry…\p"
+	.string "It doesn't appear as if I have any move\n"
+	.string "I can teach that POKéMON.$"
+
+FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale:
+	.string "{PLAYER} handed over one HEART SCALE\n"
+	.string "in exchange.$"
+
+FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
+	.string "If your POKéMON need to learn a move,\n"
+	.string "come back with a HEART SCALE.$"
+
+FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
+	.string "Hunh? There isn't a single move that\n"
+	.string "I can teach an EGG.$"
+
+`
+
+script FallarborTown_AnabelsHouse_EventScript_Anabel {
+    lockall
+    faceplayer
+	if(flag(FLAG_DEFEATED_ANABEL_1) == TRUE && flag(FLAG_DEFEATED_ANABEL_2) == FALSE) {
+		call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+	}
+	if(flag(FLAG_DEFEATED_ANABEL_2)) {
+		msgbox(format("Hi, {PLAYER}! Which collection would you like to see?"))
+		multichoicedefault(0, 0, MULTI_ANABEL_COLLECTIONS, 0, 0)
+		if(var(VAR_RESULT) == 0) {
+			call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+		}
+		if(var(VAR_RESULT) == 1) {
+			call(FallarborTown_AnabelsHouse_EventScript_GMegaBattles)
+		}
+	}
+	if(flag(FLAG_UNLOCKED_ANABEL_2)) {
+		msgbox("ANABEL: Greetings, {PLAYER}, I'm glad\nyou came.\pIt's been a while since our battle and\n I can tell you've gotten stronger.\pI'll fight you with a bit more\nfirepower this time, and if you beat\nme, I promise I'll make it worth your\nwhile.\pSo, what do you say?", MSGBOX_YESNO)
+		if(var(VAR_RESULT) == 1) {
+			msgbox(format("Fufufu... Well, let's begin, shall we?"))
+			trainerbattle_no_intro(TRAINER_ANABEL_FALLARBOR_2, Anabel_PostBattle2)
+			msgbox(format("ANABEL: Fufu, as expected, you\ndid not disappoint.\pPerhaps in our next battle I can\nfinally go all out...\pWell, I promised you a reward\ndidn't I?\pBy now I trust you enough to give\nyou access to my 'expanded' collection\nof MEGA STONES.\pOne could even call this a\n Gigantic opportunity for you.\pCome see me when you want to take\nyour POKéMON even further."))
+			setflag(FLAG_DEFEATED_ANABEL_2)
+		}
+		if(var(VAR_RESULT) == 0) {
+			msgbox(format("I see... very disappointing."))
+		}
+	}
+	else {
+		msgbox("Hm? Who might you be?")
+		if(var(VAR_ZINNIA_EVENTS > 1)) {
+			msgbox("Hold on, is that a MEGA RING?\pHm, how peculiar, you don't look\nfamiliar.\p...My name is ANABEL. I'd like to\nbattle you, if you're up for it.", MSGBOX_YESNO)
+			if(var(VAR_RESULT) == 1) {
+				msgbox("Fufufu... Well, then...\pShow me what you're made of.")
+				trainerbattle_no_intro(TRAINER_ANABEL_FALLARBOR_1, Anabel_PostBattle)
+				msgbox("ANABEL: It's been a while since\nsomeone has defeated me.\pMaybe one day you'll be strong enough\nto take me on at my full power...\pBut thank you for the match. Tell\nyou what, your MEGA RING looks\nawfully dormant.\pYou don't have any MEGA STONES,\ndo you?\pSince you beat me, I'll do you\na favor.\pIf you can beat my mega evolved POKéMON,\n I'll give you its MEGA STONE.", MSGBOX_DEFAULT)
+				setflag(FLAG_DEFEATED_ANABEL_1)
+				msgbox("Come see me when you want to draw\nout your POKéMON's full potential.", MSGBOX_DEFAULT)
+			}
+			if(var(VAR_RESULT) == 0) {
+				msgbox("How disappointing.")
+			}
+    	}
+		else {
+			msgbox("If you have no business with me I'd\nlike you to leave.", MSGBOX_DEFAULT)
+		}
+	}
+    releaseall
+}
+
+text Anabel_PostBattle {
+    "ANABEL: Fufu... I like you."
+}
+
+text Anabel_PostBattle2 {
+	"ANABEL: Maybe... Just maybe..."
+}
+
+mart Anabel_MegaStones {
+	ITEM_VENUSAURITE
+	ITEM_CHARIZARDITE_X
+	ITEM_CHARIZARDITE_Y
+	ITEM_BLASTOISINITE
+	ITEM_BEEDRILLITE
+	ITEM_PIDGEOTITE
+	ITEM_ALAKAZITE
+	ITEM_SLOWBRONITE
+	ITEM_GENGARITE
+	ITEM_KANGASKHANITE
+	ITEM_PINSIRITE
+	ITEM_GYARADOSITE
+	ITEM_AERODACTYLITE
+	ITEM_AMPHAROSITE
+	ITEM_STEELIXITE
+	ITEM_SCIZORITE
+	ITEM_HERACRONITE
+	ITEM_HOUNDOOMINITE
+	ITEM_TYRANITARITE
+	ITEM_SCEPTILITE
+	ITEM_BLAZIKENITE
+	ITEM_SWAMPERTITE
+	ITEM_GARDEVOIRITE
+	ITEM_SABLENITE
+	ITEM_MAWILITE
+	ITEM_AGGRONITE
+	ITEM_MEDICHAMITE
+	ITEM_MANECTITE
+	ITEM_SHARPEDONITE
+	ITEM_CAMERUPTITE
+	ITEM_ALTARIANITE
+	ITEM_BANETTITE
+	ITEM_ABSOLITE
+	ITEM_GLALITITE
+	ITEM_SALAMENCITE
+	ITEM_METAGROSSITE
+	ITEM_LOPUNNITE
+	ITEM_GARCHOMPITE
+	ITEM_LUCARIONITE
+	ITEM_ABOMASITE
+	ITEM_GALLADITE
+	ITEM_AUDINITE
+}
+
+mart Anabel_GMaxStones {
+	ITEM_CORVIKNITE_G
+	ITEM_ORBEETLITE_G
+	ITEM_DREDNAWITE_G
+	ITEM_COALOSSALITE_G
+	ITEM_APPLETITE_G
+	ITEM_SANDACONDITE_G
+	ITEM_TOXTRICITITE_G
+	ITEM_CENTISKORCHITE_G
+	ITEM_HATTERENITE_G
+	ITEM_GRIMMSNARLITE_G
+	ITEM_ALCREMITE_G
+	ITEM_COPPERAJITE_G
+	ITEM_ARCHALUDONITE_G
+	ITEM_VENUSAURITE_G
+	ITEM_CHARIZARDITE_G
+	ITEM_BLASTOISINITE_G
+	ITEM_BUTTERFREENITE_G
+	ITEM_PIKACHUITE_G
+	ITEM_MEOWTHITE_G
+	ITEM_MACHAMPITE_G
+	ITEM_GENGARITE_G
+	ITEM_KINGLERITE_G
+	ITEM_LAPRASITE_G
+	ITEM_EEVEENITE_G
+	ITEM_SNORLAXITE_G
+	ITEM_GARBODORITE_G
+}
+
+// Stones not obtainable from Anabel:
+// Mewtwonite X/Y, Latiosite, Latiasite, 
+// Diancite, Melmetalite G, Urshifunite G,
+// Rillaboomite G, Cinderacite G, Inteleonite G
+
+script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
+	msgbox("ANABEL: So, which MEGA STONE are you\ninterested in?", MSGBOX_DEFAULT)
+		setvar(VAR_0x8000, 116)
+		special(ShowScrollableMultichoice)
+		waitstate
+		if(var(VAR_RESULT) == 0 ) {
+			checkspecies(SPECIES_VENUSAUR, OPEN_PARTY_SCREEN)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_VENUSAUR_MEGA, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_VENUSAURITE)
+			end
+		}
+		if(var(VAR_RESULT) == 1) {
+			checkspecies(SPECIES_CHARIZARD, OPEN_PARTY_SCREEN)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_CHARIZARD_MEGA_X, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_CHARIZARDITE_X)
+			end
+		}
+		if(var(VAR_RESULT) == 2 ) {
+			checkspecies(SPECIES_CHARIZARD, OPEN_PARTY_SCREEN)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_CHARIZARD_MEGA_Y, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_CHARIZARDITE_Y)
+			end
+		}
+		if(var(VAR_RESULT) == 3 ) {
+			checkspecies(SPECIES_BLASTOISE, OPEN_PARTY_SCREEN)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_BLASTOISE_MEGA, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_BLASTOISINITE)
+			end
+		}
+		if(var(VAR_RESULT) == 4 ) {
+			checkspecies(SPECIES_BEEDRILL, OPEN_PARTY_SCREEN)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_BEEDRILL_MEGA, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_BEEDRILLITE)
+			end
+		}
+		if(var(VAR_RESULT) == 5 ) {
+			checkspecies(SPECIES_PIDGEOT, OPEN_PARTY_SCREEN)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_PIDGEOT_MEGA, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_PIDGEOTITE)
+			end
+		}
+		if(var(VAR_RESULT) == 6 ) {
+			checkspecies(SPECIES_GYARADOS, OPEN_PARTY_SCREEN)
+			checkspecies_choose(SPECIES_GYARADOS)
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_GYARADOS_MEGA, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			giveitem(ITEM_GYARADOSITE)
+			end
+		}
+		else {
+			end
+		}
+}
+
+script FallarborTown_AnabelsHouse_EventScript_GMegaBattles {
+
+}

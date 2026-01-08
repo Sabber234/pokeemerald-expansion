@@ -2028,27 +2028,3 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1015 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
-
-RandomWeather::
-# 1020 "data/maps/LittlerootTown/scripts.pory"
-	random 15
-RandomWeather_2:
-# 1021 "data/maps/LittlerootTown/scripts.pory"
-	compare VAR_RESULT, 10
-	goto_if_eq RandomWeather_3
-# 1021 "data/maps/LittlerootTown/scripts.pory"
-	compare VAR_RESULT, 14
-	goto_if_eq RandomWeather_3
-# 1025 "data/maps/LittlerootTown/scripts.pory"
-	setweather VAR_RESULT
-# 1026 "data/maps/LittlerootTown/scripts.pory"
-	doweather
-# 1027 "data/maps/LittlerootTown/scripts.pory"
-	setvar VAR_LITTLEROOT_WEATHER_STATE, 1
-	return
-
-RandomWeather_3:
-# 1022 "data/maps/LittlerootTown/scripts.pory"
-	random 15
-	goto RandomWeather_2
-

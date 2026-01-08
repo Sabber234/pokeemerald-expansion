@@ -180,6 +180,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_MAUVILLE_CITY_SCOTT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 12,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZINNIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WHISMUR)",
+      "x": 12,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZINNIA"
     }
   ],
   "warp_events": [
@@ -233,7 +259,35 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_MAUVILLE_CITY_STATE",
+      "var_value": "0",
+      "script": "MauvilleCity_EventScript_WhismurChase"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_MAUVILLE_CITY_STATE",
+      "var_value": "0",
+      "script": "MauvilleCity_EventScript_WhismurChase"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_MAUVILLE_CITY_STATE",
+      "var_value": "0",
+      "script": "MauvilleCity_EventScript_WhismurChase"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
