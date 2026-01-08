@@ -594,6 +594,7 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 # 298 "data/maps/Route101/scripts.pory"
 	.string "{UP_ARROW} OLDALE TOWN$"
+<<<<<<< HEAD
 
 Route101_Flannery_Battle::
 # 303 "data/maps/Route101/scripts.pory"
@@ -675,3 +676,5 @@ Route101_Flannery_Postbattle::
 >>>>>>> 0271bf45d4 (Finished video tutorial)
 	.string "Seriously, I'm getting all hot and\n"
 	.string "bothered over here.$"
+=======
+>>>>>>> 38d951d74d (Local Changes 1)

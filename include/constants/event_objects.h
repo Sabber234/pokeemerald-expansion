@@ -246,7 +246,11 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
+<<<<<<< HEAD
 #define OBJ_EVENT_GFX_APRICORN_TREE              242
+=======
+#define OBJ_EVENT_GFX_ZINNIA                     242
+>>>>>>> 38d951d74d (Local Changes 1)
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -381,6 +385,7 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x1125
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

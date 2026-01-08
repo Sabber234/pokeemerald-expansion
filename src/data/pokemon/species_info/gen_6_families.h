@@ -2047,7 +2047,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             gOverworldPalette_Floette ##form,                                   \
             gShinyOverworldPalette_Floette ##form                               \
         )                                                                       \
-        .formSpeciesIdTable = sFloetteFormSpeciesIdTable
+        .formSpeciesIdTable = sFloetteFormSpeciesIdTable                       \
+        //.formChangeTable = sFloetteFormChangeTable
 
 #define FLOETTE_NORMAL_INFO(form, FORM, iconPal)                                                \
         .baseHP        = 54,                                                                    \

@@ -2075,6 +2075,15 @@ static const u16 sAppletunFormSpeciesIdTable[] = {
 #endif
     FORM_SPECIES_END,
 };
+
+static const u16 sHydrappleFormSpeciesIdTable[] = {
+    SPECIES_HYDRAPPLE,
+#if P_GIGANTAMAX_FORMS
+    SPECIES_FLAPPLE_GMAX,
+#endif
+    FORM_SPECIES_END,
+};
+
 #endif //P_FAMILY_APPLIN
 
 #if P_FAMILY_SILICOBRA

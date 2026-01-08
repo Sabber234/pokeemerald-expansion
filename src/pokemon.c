@@ -68,6 +68,14 @@
 #include "constants/trainers.h"
 #include "constants/union_room.h"
 #include "constants/weather.h"
+<<<<<<< HEAD
+=======
+#include "wild_encounter.h"
+#include "move.h"
+#include <stdio.h>
+
+
+>>>>>>> 38d951d74d (Local Changes 1)
 
 #define FRIENDSHIP_EVO_THRESHOLD ((P_FRIENDSHIP_EVO_THRESHOLD >= GEN_8) ? 160 : 220)
 
@@ -7464,6 +7472,7 @@ enum Type GetTeraTypeFromPersonality(struct Pokemon *mon)
     return (GetMonData(mon, MON_DATA_PERSONALITY) & 0x1) == 0 ? types[0] : types[1];
 }
 
+<<<<<<< HEAD
 struct Pokemon *GetSavedPlayerPartyMon(u32 index)
 {
     return &gSaveBlock1Ptr->playerParty[index];
@@ -7486,3 +7495,10 @@ bool32 IsSpeciesOfType(u32 species, enum Type type)
         return TRUE;
     return FALSE;
 }
+=======
+
+
+
+
+
+>>>>>>> 38d951d74d (Local Changes 1)

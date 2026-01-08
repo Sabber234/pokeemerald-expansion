@@ -43,16 +43,16 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_RECEIVED_STARTERLEFT    0x20 // Unused Flag
-#define FLAG_RECEIVED_STARTERMIDDLE    0x21 // Unused Flag
-#define FLAG_RECEIVED_STARTERRIGHT    0x22 // Unused Flag
-#define FLAG_RECEIVED_STARTER   0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_CATCHING_DISABLED    0x20 // Disables catching wild Pokemon.
+#define FLAG_SMART_WILDS    0x21 // Gives wild Pokemon Smart AI.
+#define FLAG_RUNNING_DISABLED    0x22 // Disables running from wild Pokemon.
+#define FLAG_UNUSED_0x23   0x23 // Unused Flag
+#define FLAG_FOLLOWERS_DISABLED    0x24 // Disables followers when set.
+#define FLAG_GAME_CORNER_PKMN_RECEIVED  0x25 // Locks Game Corner PKMN when set.
+#define FLAG_HIDE_ZINNIA    0x26 // Hides Zinnia and Aster when set.
+#define FLAG_DEFEATED_ANABEL_1 0x27 // Fallarbor first Anabel fight.
+#define FLAG_DEFEATED_ANABEL_2    0x28 // Fallarbor second Anabel fight.
+#define FLAG_UNLOCKED_ANABEL_2    0x29 // Unlocks second Anabel fight.
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag

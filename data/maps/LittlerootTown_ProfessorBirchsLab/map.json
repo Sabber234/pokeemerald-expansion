@@ -97,58 +97,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Chikorita",
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CHIKORITA"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 11,
-      "y": 3,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittleRootTown_ProfessorBirchsLab_EventScript_StarterRightSelection",
-      "flag": "FLAG_RECEIVED_STARTERRIGHT"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 10,
-      "y": 3,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittleRootTown_ProfessorBirchsLab_EventScript_StarterMiddleSelection",
-      "flag": "FLAG_RECEIVED_STARTERMIDDLE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 9,
-      "y": 3,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittleRootTown_ProfessorBirchsLab_EventScript_StarterLeftSelection",
-      "flag": "FLAG_RECEIVED_STARTERLEFT"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
-      "x": 5,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ProfessorLab_Steven",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -167,62 +115,7 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STARTER_SELECTION_STATE",
-      "var_value": "1",
-      "script": "ProfessorLab_Trigger_PlayerAttemptsToLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STARTER_SELECTION_STATE",
-      "var_value": "1",
-      "script": "ProfessorLab_Trigger_PlayerAttemptsToLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STARTER_SELECTION_STATE",
-      "var_value": "1",
-      "script": "ProfessorLab_Trigger_PlayerAttemptsToLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STARTER_SELECTION_STATE",
-      "var_value": "1",
-      "script": "ProfessorLab_Trigger_PlayerAttemptsToLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STARTER_SELECTION_STATE",
-      "var_value": "1",
-      "script": "ProfessorLab_Trigger_PlayerAttemptsToLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STARTER_SELECTION_STATE",
-      "var_value": "1",
-      "script": "ProfessorLab_Trigger_PlayerAttemptsToLeave"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

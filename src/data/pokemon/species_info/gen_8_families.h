@@ -201,10 +201,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     {
         .baseHP        = 100,
         .baseAttack    = 125,
-        .baseDefense   = 90,
+        .baseDefense   = 115,
         .baseSpeed     = 85,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 70,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
         .expYield = 265,
@@ -214,14 +214,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_GRASSY_SURGE },
+        .abilities = { ABILITY_PUNK_ROCK, ABILITY_PUNK_ROCK, ABILITY_PUNK_ROCK },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Rillaboom"),
         .cryId = CRY_RILLABOOM,
         .natDexNum = NATIONAL_DEX_RILLABOOM,
         .categoryName = _("Drummer"),
         .height = 280,
-        .weight = 0,
+        .weight = 1900,
         .description = COMPOUND_STRING(
             "Rillaboom has become one with its\n"
             "forest of drums and continues to lay\n"
@@ -453,11 +453,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_CINDERACE_GMAX] =
     {
         .baseHP        = 80,
-        .baseAttack    = 116,
-        .baseDefense   = 75,
-        .baseSpeed     = 119,
+        .baseAttack    = 156,
+        .baseDefense   = 95,
+        .baseSpeed     = 139,
         .baseSpAttack  = 65,
-        .baseSpDefense = 75,
+        .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 45,
         .expYield = 265,
@@ -467,14 +467,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_LIBERO },
+        .abilities = { ABILITY_NO_GUARD, ABILITY_NO_GUARD, ABILITY_NO_GUARD },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Cinderace"),
         .cryId = CRY_CINDERACE,
         .natDexNum = NATIONAL_DEX_CINDERACE,
         .categoryName = _("Striker"),
         .height = 270,
-        .weight = 0,
+        .weight = 1330,
         .description = COMPOUND_STRING(
             "Infused with Cinderace's fighting\n"
             "spirit, the gigantic Pyro Ball never\n"
@@ -709,10 +709,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     {
         .baseHP        = 70,
         .baseAttack    = 85,
-        .baseDefense   = 65,
+        .baseDefense   = 100,
         .baseSpeed     = 120,
-        .baseSpAttack  = 125,
-        .baseSpDefense = 65,
+        .baseSpAttack  = 155,
+        .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,
         .expYield = 265,
@@ -722,14 +722,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SNIPER },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_SUPER_LUCK, ABILITY_SUPER_LUCK },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Inteleon"),
         .cryId = CRY_INTELEON,
         .natDexNum = NATIONAL_DEX_INTELEON,
         .categoryName = _("Secret Agent"),
         .height = 400,
-        .weight = 0,
+        .weight = 1452,
         .description = COMPOUND_STRING(
             "Gigantamax Inteleon's Water Gun\n"
             "move fires at Mach 7. As the Pokémon\n"
@@ -1115,11 +1115,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_CORVIKNIGHT_GMAX] =
     {
         .baseHP        = 98,
-        .baseAttack    = 87,
-        .baseDefense   = 105,
+        .baseAttack    = 107,
+        .baseDefense   = 155,
         .baseSpeed     = 67,
         .baseSpAttack  = 53,
-        .baseSpDefense = 85,
+        .baseSpDefense = 115,
         .types = MON_TYPES(TYPE_FLYING, TYPE_STEEL),
         .catchRate = 45,
         .expYield = 248,
@@ -1129,14 +1129,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
-        .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },
+        .abilities = { ABILITY_STAMINA, ABILITY_STAMINA, ABILITY_STAMINA},
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Corviknight"),
         .cryId = CRY_CORVIKNIGHT,
         .natDexNum = NATIONAL_DEX_CORVIKNIGHT,
         .categoryName = _("Raven"),
         .height = 140,
-        .weight = 0,
+        .weight = 1750,
         .description = COMPOUND_STRING(
             "Imbued with Gigantamax energy, its\n"
             "wings can whip up winds more\n"
@@ -1374,10 +1374,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     {
         .baseHP        = 60,
         .baseAttack    = 45,
-        .baseDefense   = 110,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 80,
-        .baseSpDefense = 120,
+        .baseDefense   = 115,
+        .baseSpeed     = 115,
+        .baseSpAttack  = 135,
+        .baseSpDefense = 140,
         .types = MON_TYPES(TYPE_BUG, TYPE_PSYCHIC),
         .catchRate = 45,
         .expYield = 253,
@@ -1388,14 +1388,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_SWARM, ABILITY_FRISK, ABILITY_TELEPATHY },
+        .abilities = { ABILITY_PSYCHIC_SURGE, ABILITY_PSYCHIC_SURGE, ABILITY_PSYCHIC_SURGE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Orbeetle"),
         .cryId = CRY_ORBEETLE,
         .natDexNum = NATIONAL_DEX_ORBEETLE,
         .categoryName = _("Seven Spot"),
         .height = 140,
-        .weight = 0,
+        .weight = 1408,
         .description = COMPOUND_STRING(
             "Its brain has grown to a gargantuan\n"
             "size, as has the rest of its body.\n"
@@ -1961,11 +1961,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_DREDNAW_GMAX] =
     {
         .baseHP        = 90,
-        .baseAttack    = 115,
-        .baseDefense   = 90,
-        .baseSpeed     = 74,
+        .baseAttack    = 145,
+        .baseDefense   = 102,
+        .baseSpeed     = 100,
         .baseSpAttack  = 48,
-        .baseSpDefense = 68,
+        .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
         .catchRate = 75,
         .expYield = 170,
@@ -1975,14 +1975,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
-        .abilities = { ABILITY_STRONG_JAW, ABILITY_SHELL_ARMOR, ABILITY_SWIFT_SWIM },
+        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_SWIFT_SWIM, ABILITY_SWIFT_SWIM },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Drednaw"),
         .cryId = CRY_DREDNAW,
         .natDexNum = NATIONAL_DEX_DREDNAW,
         .categoryName = _("Bite"),
         .height = 240,
-        .weight = 0,
+        .weight = 2155,
         .description = COMPOUND_STRING(
             "In the Galar region, there's a tale\n"
             "about this Pokémon chewing up a\n"
@@ -2359,14 +2359,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_STEAM_ENGINE, ABILITY_FLAME_BODY, ABILITY_FLASH_FIRE },
+        .abilities = { ABILITY_DROUGHT, ABILITY_DROUGHT, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Coalossal"),
         .cryId = CRY_COALOSSAL,
         .natDexNum = NATIONAL_DEX_COALOSSAL,
         .categoryName = _("Coal"),
         .height = 420,
-        .weight = 0,
+        .weight = 7500,
         .description = COMPOUND_STRING(
             "Its body is a colossal stove. With\n"
             "Gigantamax energy stoking the fire,\n"
@@ -2845,6 +2845,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sHydrappleLevelUpLearnset,
         .teachableLearnset = sHydrappleTeachableLearnset,
+        .formSpeciesIdTable = sHydrappleFormSpeciesIdTable,
+        .formChangeTable = sHydrappleFormChangeTable,
     },
 #endif //P_GEN_9_CROSS_EVOS
 #endif //P_FAMILY_APPLIN
@@ -6593,6 +6595,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sArchaludonLevelUpLearnset,
         .teachableLearnset = sArchaludonTeachableLearnset,
+        .formSpeciesIdTable = sDuraludonFormSpeciesIdTable,
+        .formChangeTable = sDuraludonFormChangeTable,
     },
 #endif //P_GEN_9_CROSS_EVOS
 #endif //P_FAMILY_DURALUDON
@@ -7135,6 +7139,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sEternatusLevelUpLearnset,
         .teachableLearnset = sEternatusTeachableLearnset,
         .formSpeciesIdTable = sEternatusFormSpeciesIdTable,
+        .formChangeTable = sEternatusFormChangeTable
     },
 
     [SPECIES_ETERNATUS_ETERNAMAX] =

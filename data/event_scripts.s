@@ -1161,5 +1161,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+<<<<<<< HEAD
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+=======
+	.include "data/scripts/setfollowermon.inc"
+	.include "data/scripts/healparty.inc"
+	.include "data/scripts/lvlcapmsg.inc"
+>>>>>>> 38d951d74d (Local Changes 1)

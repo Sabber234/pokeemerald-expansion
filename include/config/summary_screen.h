@@ -4,14 +4,23 @@
 // Settings
 #define P_SUMMARY_SCREEN_NATURE_COLORS   TRUE   // If TRUE, nature-based stat boosts and reductions will be red and blue in the summary screen.
 #define P_SUMMARY_SCREEN_RENAME          TRUE   // If TRUE, an option to change Pokémon nicknames replaces the cancel prompt on the summary screen info page.
+<<<<<<< HEAD
 
 // IV/EV settings
 #define P_SUMMARY_SCREEN_IV_EV_INFO      FALSE  // If TRUE, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page.
+=======
+#define P_SUMMARY_SCREEN_IV_EV_INFO      TRUE  // If TRUE, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page.
+>>>>>>> 38d951d74d (Local Changes 1)
 #define P_SUMMARY_SCREEN_IV_EV_BOX_ONLY  FALSE  // If TRUE, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page, but only in the PC storage box.
 #define P_SUMMARY_SCREEN_IV_HYPERTRAIN   TRUE   // If TRUE, stats that have been hyper trained will show as 31/S when viewing them in the summary screen
 #define P_SUMMARY_SCREEN_IV_EV_TILESET   FALSE  // If TRUE, loads an alternate tileset to allow changing the "STATS" label in the summary screen skills page. Note: if it's still loading the alternate tileset after changing this and recompiling, you may need a `make clean` before compilation.
+<<<<<<< HEAD
 #define P_SUMMARY_SCREEN_IV_EV_VALUES    FALSE  // If TRUE, will show the actual IV value instead of the letter grade.
 /*
+=======
+#define P_SUMMARY_SCREEN_IV_EV_VALUES    TRUE  // If TRUE, will show the actual IV value instead of the letter grade.
+/* 
+>>>>>>> 38d951d74d (Local Changes 1)
 LETTER GRADE GUIDE:
 
     F = 0
@@ -23,7 +32,7 @@ LETTER GRADE GUIDE:
 
 Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 */
-#define P_SUMMARY_SCREEN_IV_ONLY         FALSE  // If TRUE, will only show IV info in the summary screen.
+#define P_SUMMARY_SCREEN_IV_ONLY         TRUE  // If TRUE, will only show IV info in the summary screen.
 #define P_SUMMARY_SCREEN_EV_ONLY         FALSE  // If TRUE, will only show EV info in the summary screen.
 
 // IV/EV flags

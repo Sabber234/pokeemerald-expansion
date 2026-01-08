@@ -164,6 +164,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setflag FLAG_ENABLE_BRAWLY_MATCH_CALL
 	setvar VAR_ROXANNE_CALL_STEP_COUNTER, 0
 	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
+	call lvlcapmsg
 	release
 	end
 

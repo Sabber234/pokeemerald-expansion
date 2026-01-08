@@ -1,0 +1,14 @@
+script HealParty {
+    lockall
+    msgbox("Would you like to heal your party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1) {
+        special(HealPlayerParty)
+        playfanfare(MUS_HEAL)
+        msgbox("Your party has been fully healed.", MSGBOX_DEFAULT)
+        waitfanfare
+    }
+    if(var(VAR_RESULT) == 0) {
+
+    }
+    releaseall
+}

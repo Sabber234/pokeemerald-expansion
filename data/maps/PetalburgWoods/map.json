@@ -122,14 +122,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 7,
-      "y": 32,
+      "x": 9,
+      "y": 31,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "PetalburgWoods_EventScript_Lyle",
       "flag": "0"
     },
@@ -138,7 +138,7 @@
       "x": 4,
       "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -184,6 +184,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PetalburgWoods_EventScript_Girl",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "x": 14,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZINNIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WHISMUR)",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZINNIA"
     }
   ],
   "warp_events": [
@@ -248,6 +274,42 @@
       "var": "VAR_PETALBURG_WOODS_STATE",
       "var_value": "0",
       "script": "PetalburgWoods_EventScript_DevonResearcherRight"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ZINNIA_EVENTS",
+      "var_value": "0",
+      "script": "PetalburgWoods_EventScript_ZinniaTeaser"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ZINNIA_EVENTS",
+      "var_value": "0",
+      "script": "PetalburgWoods_EventScript_ZinniaTeaser"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_ZINNIA_EVENTS",
+      "var_value": "0",
+      "script": "PetalburgWoods_EventScript_HideZinnia"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_ZINNIA_EVENTS",
+      "var_value": "0",
+      "script": "PetalburgWoods_EventScript_HideZinnia"
     }
   ],
   "bg_events": [

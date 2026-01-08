@@ -206,6 +206,8 @@ extern const u8 gText_MenuPokenav[];
 extern const u8 gText_MenuPlayer[];
 extern const u8 gText_MenuSave[];
 extern const u8 gText_MenuOption[];
+extern const u8 gText_MenuSetFollowerMon[];
+extern const u8 gText_MenuHealParty[];
 extern const u8 gText_MenuExit[];
 extern const u8 gText_MenuRetire[];
 extern const u8 gText_MenuRest[];
@@ -227,6 +229,8 @@ extern const u8 gText_MenuOptionBag[];
 extern const u8 gText_MenuOptionPokenav[];
 extern const u8 gText_MenuOptionSave[];
 extern const u8 gText_MenuOptionOption[];
+extern const u8 gText_MenuOptionSetFollowerMon[];
+extern const u8 gText_MenuOptionHealParty[];
 extern const u8 gText_MenuOptionExit[];
 
 // save menu texts

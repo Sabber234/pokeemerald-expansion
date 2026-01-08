@@ -108,6 +108,8 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
+	setvar VAR_MAUVILLE_CITY_STATE, 1
+	call lvlcapmsg
 	release
 	end
 
