@@ -110,7 +110,15 @@
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_ZINNIA_CALM           93
 #define TRAINER_PIC_ZINNIA_PUMPED         94
-#define TRAINER_PIC_COUNT                 95
+#define TRAINER_PIC_LEADER_BLAINE         95
+#define TRAINER_PIC_LEADER_BROCK          96
+#define TRAINER_PIC_LEADER_ERIKA          97
+#define TRAINER_PIC_LEADER_GIOVANNI       98
+#define TRAINER_PIC_LEADER_KOGA           99
+#define TRAINER_PIC_LEADER_LT_SURGE       100
+#define TRAINER_PIC_MISTY                 101
+#define TRAINER_PIC_SABRINA               102
+#define TRAINER_PIC_COUNT                 103
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
