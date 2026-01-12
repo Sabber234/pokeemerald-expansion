@@ -1946,17 +1946,17 @@ static void Task_WaitStopSurfing(u8 taskId)
 #define FISHING_STICKY_BOOST    36
 
 #if I_FISHING_BITE_ODDS >= GEN_4
-    #define FISHING_OLD_ROD_ODDS 100
-    #define FISHING_GOOD_ROD_ODDS 100
-    #define FISHING_SUPER_ROD_ODDS 100
+    #define FISHING_OLD_ROD_ODDS 0
+    #define FISHING_GOOD_ROD_ODDS 0
+    #define FISHING_SUPER_ROD_ODDS 0
 #elif I_FISHING_BITE_ODDS >= GEN_3
-    #define FISHING_OLD_ROD_ODDS 100
-    #define FISHING_GOOD_ROD_ODDS 100
-    #define FISHING_SUPER_ROD_ODDS 100
+    #define FISHING_OLD_ROD_ODDS 0
+    #define FISHING_GOOD_ROD_ODDS 0
+    #define FISHING_SUPER_ROD_ODDS 0
 #else
-    #define FISHING_OLD_ROD_ODDS 100
-    #define FISHING_GOOD_ROD_ODDS 100
-    #define FISHING_SUPER_ROD_ODDS 100
+    #define FISHING_OLD_ROD_ODDS 0
+    #define FISHING_GOOD_ROD_ODDS 0
+    #define FISHING_SUPER_ROD_ODDS 0
 #endif
 
 enum
