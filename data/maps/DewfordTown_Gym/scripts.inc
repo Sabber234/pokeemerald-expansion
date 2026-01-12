@@ -7,6 +7,7 @@ DewfordTown_Gym_OnTransition:
 	end
 
 DewfordTown_Gym_EventScript_SetFlashLevel::
+	end
 	goto_if_defeated TRAINER_BRAWLY_1, DewfordTown_Gym_EventScript_SetLightsOn
 	call DewfordTown_Gym_EventScript_CountTrainersDefeated
 	copyvar VAR_0x8001, VAR_0x8000
@@ -142,7 +143,6 @@ DewfordTown_Gym_EventScript_Brawly::
 	end
 
 DewfordTown_Gym_EventScript_BrawlyDefeated::
-	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare

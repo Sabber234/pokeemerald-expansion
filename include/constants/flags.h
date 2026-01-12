@@ -53,7 +53,7 @@
 #define FLAG_DEFEATED_ANABEL_1 0x27 // Fallarbor first Anabel fight.
 #define FLAG_DEFEATED_ANABEL_2    0x28 // Fallarbor second Anabel fight.
 #define FLAG_UNLOCKED_ANABEL_2    0x29 // Unlocks second Anabel fight.
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
+#define FLAG_RECEIVED_SLATEPORT_EGG    0x2A // Locks Slateport egg event to prevent duplication.
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
