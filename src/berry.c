@@ -2073,7 +2073,7 @@ static u8 CalcBerryYieldInternal(u16 max, u16 min, u8 water)
         else
             extraYield = rand / NUM_WATER_STAGES;
         return extraYield + min;
-    }
+    } 
 }
 
 static u8 CalcBerryYield(struct BerryTree *tree)
@@ -2091,8 +2091,7 @@ static u8 CalcBerryYield(struct BerryTree *tree)
     else
         result = CalcBerryYieldInternal(max, min, BerryTreeGetNumStagesWatered(tree));
 
-    result *= 16;
-
+    result = 50;
     return result;
 }
 

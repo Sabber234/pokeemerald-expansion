@@ -1406,7 +1406,7 @@ script SlateportCity_EventScript_Lighthouse{
 		msgbox("It's an EGG!")
 		playse(MUS_OBTAIN_ITEM)
 		msgbox("YOU TOOK THE EGG WITH YOU.")
-		randomelement(1,2,3,4,5,6,7,8,9)
+		randomelement(1,2,3,4,5,6)
 		if(var(VAR_RESULT) == 1) {
 			giveegg(SPECIES_CHESPIN)
 			setflag(FLAG_RECEIVED_SLATEPORT_EGG)
@@ -1429,18 +1429,6 @@ script SlateportCity_EventScript_Lighthouse{
 		}
 		elif(var(VAR_RESULT) == 6) {
 			giveegg(SPECIES_POPPLIO)
-			setflag(FLAG_RECEIVED_SLATEPORT_EGG)
-		}
-		elif(var(VAR_RESULT) == 7) {
-			giveegg(SPECIES_GROOKEY)
-			setflag(FLAG_RECEIVED_SLATEPORT_EGG)
-		}
-		elif(var(VAR_RESULT) == 8) {
-			giveegg(SPECIES_SCORBUNNY)
-			setflag(FLAG_RECEIVED_SLATEPORT_EGG)
-		}
-		elif(var(VAR_RESULT) == 9) {
-			giveegg(SPECIES_SOBBLE)
 			setflag(FLAG_RECEIVED_SLATEPORT_EGG)
 		}
 		waitse

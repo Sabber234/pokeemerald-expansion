@@ -4159,7 +4159,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .teachableLearnset = sPetililTeachableLearnset,
         .eggMoveLearnset = sPetililEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT},
-                                {EVO_NONE, 0, SPECIES_LILLIGANT_HISUI}),
+                                {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LILLIGANT_HISUI}),
     },
 
     [SPECIES_LILLIGANT] =
@@ -10677,7 +10677,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sMienfooLevelUpLearnset,
         .teachableLearnset = sMienfooTeachableLearnset,
         .eggMoveLearnset = sMienfooEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_MIENSHAO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_MIENSHAO}),
     },
 
     [SPECIES_MIENSHAO] =

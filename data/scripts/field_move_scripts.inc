@@ -2,8 +2,6 @@
 EventScript_CutTree::
 	lockall
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_CUT
@@ -65,8 +63,6 @@ EventScript_UseRockSmash::
 EventScript_RockSmash::
 	lockall
 	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
-	checkpartymove MOVE_ROCK_SMASH
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
@@ -227,8 +223,6 @@ EventScript_StrengthBoulder::
 	lockall
 	goto_if_unset FLAG_BADGE04_GET, EventScript_CantStrength
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
-	checkpartymove MOVE_STRENGTH
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantStrength
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength

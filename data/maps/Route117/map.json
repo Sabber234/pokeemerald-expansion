@@ -204,7 +204,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_GREAT_BALL",
+      "trainer_sight_or_berry_tree_id": "ITEM_TART_APPLE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_117_GREAT_BALL"
     },
@@ -223,14 +223,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 9,
-      "y": 1,
+      "x": 4,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_REVIVE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SWEET_APPLE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_117_REVIVE"
     },
@@ -330,7 +330,7 @@
       "x": 15,
       "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 4,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -402,10 +402,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 3,
-      "y": 18,
+      "x": 9,
+      "y": 1,
       "elevation": 3,
-      "item": "ITEM_REPEL",
+      "item": "ITEM_SYRUPY_APPLE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_REPEL"
     }
   ]

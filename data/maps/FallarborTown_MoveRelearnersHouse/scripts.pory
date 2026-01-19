@@ -132,7 +132,7 @@ script FallarborTown_AnabelsHouse_EventScript_Anabel {
 			if(var(VAR_RESULT) == 1) {
 				msgbox("Fufufu... Well, then...\pShow me what you're made of.")
 				trainerbattle_no_intro(TRAINER_ANABEL_FALLARBOR_1, Anabel_PostBattle)
-				msgbox("ANABEL: It's been a while since\nsomeone has defeated me.\pMaybe one day you'll be strong enough\nto take me on at my full power...\pBut thank you for the match. Tell\nyou what, your MEGA RING looks\nawfully dormant.\pYou don't have any MEGA STONES,\ndo you?\pSince you beat me, I'll do you\na favor.\pIf you can beat my mega evolved POKéMON,\n I'll give you its MEGA STONE.", MSGBOX_DEFAULT)
+				msgbox("ANABEL: It's been a while since\nsomeone has defeated me.\pMaybe one day you'll be strong enough\nto take me on at my full power...\pBut thank you for the match. Tell\nyou what, your MEGA RING looks\lawfully dormant.\pYou don't have any MEGA STONES,\ndo you?\pSince you beat me, I'll do you\na favor.\pIf you can beat my mega\nevolved POKéMON, I'll give you\ltheir MEGA STONES.", MSGBOX_DEFAULT)
 				setflag(FLAG_DEFEATED_ANABEL_1)
 				msgbox("Come see me when you want to draw\nout your POKéMON's full potential.", MSGBOX_DEFAULT)
 			}
@@ -236,11 +236,18 @@ mart Anabel_GMaxStones {
 
 script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 	msgbox("ANABEL: So, which MEGA STONE are you\ninterested in?", MSGBOX_DEFAULT)
-		setvar(VAR_0x8000, 116)
+		setvar(VAR_0x8009, 0)
+		setvar(VAR_0x8004,SCROLL_MULTI_ANABEL_MEGAS)	//Looks for SCROLL_MULTI_ANABEL_MEGAS
 		special(ShowScrollableMultichoice)
 		waitstate
 		if(var(VAR_RESULT) == 0 ) {
 			checkspecies(SPECIES_VENUSAUR, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nVENUSAUR with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
@@ -248,12 +255,19 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_VENUSAURITE)
 			end
+			}
 		}
-		if(var(VAR_RESULT) == 1) {
+		if(var(VAR_RESULT) == 1 ) {
 			checkspecies(SPECIES_CHARIZARD, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nCHARIZARD with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
@@ -261,12 +275,19 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_CHARIZARDITE_X)
 			end
+			}
 		}
 		if(var(VAR_RESULT) == 2 ) {
 			checkspecies(SPECIES_CHARIZARD, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nCHARIZARD with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
@@ -274,12 +295,19 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_CHARIZARDITE_Y)
 			end
+			}
 		}
 		if(var(VAR_RESULT) == 3 ) {
 			checkspecies(SPECIES_BLASTOISE, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nBLASTOISE with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
@@ -287,12 +315,19 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_BLASTOISINITE)
 			end
+			}
 		}
 		if(var(VAR_RESULT) == 4 ) {
 			checkspecies(SPECIES_BEEDRILL, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nBEEDRILL with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
@@ -300,12 +335,19 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_BEEDRILLITE)
 			end
+			}
 		}
 		if(var(VAR_RESULT) == 5 ) {
 			checkspecies(SPECIES_PIDGEOT, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nPIDGEOT with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
@@ -313,23 +355,50 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_PIDGEOTITE)
 			end
+			}
 		}
 		if(var(VAR_RESULT) == 6 ) {
-			checkspecies(SPECIES_GYARADOS, OPEN_PARTY_SCREEN)
-			checkspecies_choose(SPECIES_GYARADOS)
+			checkspecies(SPECIES_ALAKAZAM, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nALAKAZAM with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
 			setflag(FLAG_CATCHING_DISABLED)
 			setflag(FLAG_RUNNING_DISABLED)
 			setflag(FLAG_SMART_WILDS)
-			setwildbattle(SPECIES_GYARADOS_MEGA, 50)
+			setwildbattle(SPECIES_ALAKAZAM_MEGA, 50)
 			dowildbattle
 			clearflag(FLAG_CATCHING_DISABLED)
 			clearflag(FLAG_SMART_WILDS)
-			msgbox(format("ANABEL: Well done, you've earned\nthis."))
-			giveitem(ITEM_GYARADOSITE)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
+			giveitem(ITEM_ALAKAZITE)
 			end
+			}
+		}
+		if(var(VAR_RESULT) == 7 ) {
+			checkspecies(SPECIES_SLOWBRO, OPEN_PARTY_SCREEN)
+			if(var(VAR_RESULT) == FALSE) {
+				msgbox(format("ANABEL: I'd like you to defeat my\nSLOWBRO with one of your own."), MSGBOX_DEFAULT)
+				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				end
+			}
+			else {
+			setflag(FLAG_CATCHING_DISABLED)
+			setflag(FLAG_RUNNING_DISABLED)
+			setflag(FLAG_SMART_WILDS)
+			setwildbattle(SPECIES_SLOWBRO_MEGA, 50)
+			dowildbattle
+			clearflag(FLAG_CATCHING_DISABLED)
+			clearflag(FLAG_SMART_WILDS)
+			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
+			giveitem(ITEM_SLOWBRONITE)
+			end
+			}
 		}
 		else {
 			end

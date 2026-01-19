@@ -273,7 +273,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_DIRE_HIT",
+      "trainer_sight_or_berry_tree_id": "ITEM_FOCUS_SASH",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_110_DIRE_HIT"
     },
@@ -484,7 +484,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
+      "trainer_sight_or_berry_tree_id": "ITEM_MAGNET",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_110_ELIXIR"
     },
@@ -730,7 +730,7 @@
       "x": 35,
       "y": 39,
       "elevation": 3,
-      "item": "ITEM_REVIVE",
+      "item": "ITEM_GRASSY_SEED",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_REVIVE"
     },
     {
@@ -738,7 +738,7 @@
       "x": 33,
       "y": 45,
       "elevation": 3,
-      "item": "ITEM_GREAT_BALL",
+      "item": "ITEM_SILK_SCARF",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_GREAT_BALL"
     },
     {
@@ -746,7 +746,7 @@
       "x": 4,
       "y": 35,
       "elevation": 3,
-      "item": "ITEM_POKE_BALL",
+      "item": "ITEM_FOCUS_SASH",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_POKE_BALL"
     },
     {
@@ -754,7 +754,7 @@
       "x": 37,
       "y": 67,
       "elevation": 3,
-      "item": "ITEM_FULL_HEAL",
+      "item": "ITEM_BLACK_GLASSES",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_FULL_HEAL"
     },
     {

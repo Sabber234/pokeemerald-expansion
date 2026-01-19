@@ -2417,6 +2417,26 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
+    case SCROLL_MULTI_ANABEL_MEGAS:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 42;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 12;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_ANABEL_GMEGAS:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 26;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 12;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
     default:
         gSpecialVar_Result = MULTI_B_PRESSED;
         DestroyTask(taskId);
@@ -2576,6 +2596,82 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_PokemonMoves,
         gText_Underpowered,
         gText_WhenInDanger,
+        gText_Exit
+    },
+    [SCROLL_MULTI_ANABEL_MEGAS] =
+    {
+        COMPOUND_STRING("VENUSAURITE"),
+        COMPOUND_STRING("CHARIZARDITE_X"),
+        COMPOUND_STRING("CHARIZARDITE_Y"),
+        COMPOUND_STRING("BLASTOISINITE"),
+        COMPOUND_STRING("BEEDRILLITE"),
+        COMPOUND_STRING("PIDGEOTITE"),
+        COMPOUND_STRING("ALAKAZITE"),
+        COMPOUND_STRING("SLOWBRONITE"),
+        COMPOUND_STRING("GENGARITE"),
+        COMPOUND_STRING("KANGASKHANITE"),
+        COMPOUND_STRING("PINSIRITE"),
+        COMPOUND_STRING("GYARADOSITE"),
+        COMPOUND_STRING("AERODACTYLITE"),
+        COMPOUND_STRING("AMPHAROSITE"),
+        COMPOUND_STRING("STEELIXITE"),
+        COMPOUND_STRING("SCIZORITE"),
+        COMPOUND_STRING("HERACRONITE"),
+        COMPOUND_STRING("HOUNDOOMITE"),
+        COMPOUND_STRING("TYRANITARITE"),
+        COMPOUND_STRING("SCEPTILITE"),
+        COMPOUND_STRING("BLAZIKENITE"),
+        COMPOUND_STRING("SWAMPERTITE"),
+        COMPOUND_STRING("GARDEVOIRITE"),
+        COMPOUND_STRING("SABLENITE"),
+        COMPOUND_STRING("MAWILITE"),
+        COMPOUND_STRING("AGGRONITE"),
+        COMPOUND_STRING("MEDICHAMITE"),
+        COMPOUND_STRING("MANECTITE"),
+        COMPOUND_STRING("SHARPEDONITE"),
+        COMPOUND_STRING("CAMERUPTITE"),
+        COMPOUND_STRING("ALTARIANITE"),
+        COMPOUND_STRING("BANETTITE"),
+        COMPOUND_STRING("ABSOLITE"),
+        COMPOUND_STRING("GLALITITE"),
+        COMPOUND_STRING("SALAMENCITE"),
+        COMPOUND_STRING("METAGROSSITE"),
+        COMPOUND_STRING("LOPUNNITE"),
+        COMPOUND_STRING("GARCHOMPITE"),
+        COMPOUND_STRING("LUCARIONITE"),
+        COMPOUND_STRING("ABOMASITE"),
+        COMPOUND_STRING("GALLADITE"),
+        COMPOUND_STRING("AUDINITE"),
+        gText_Exit
+    },
+    [SCROLL_MULTI_ANABEL_GMEGAS] =
+    {
+        COMPOUND_STRING("CORVIKNITE G"),
+        COMPOUND_STRING("ORBEETLITE G"),
+        COMPOUND_STRING("DREDNAWITE G"),
+        COMPOUND_STRING("COALOSSALITE G"),
+        COMPOUND_STRING("APPLETITE G"),
+        COMPOUND_STRING("SANDACONDITE G"),
+        COMPOUND_STRING("TOXTRICITITE G"),
+        COMPOUND_STRING("CENTISKORCHITE G"),
+        COMPOUND_STRING("HATTERENITE G"),
+        COMPOUND_STRING("GRIMMSNARLITE G"),
+        COMPOUND_STRING("ALCREMITE G"),
+        COMPOUND_STRING("COPPERAJITE G"),
+        COMPOUND_STRING("ARCHALUDONITE G"),
+        COMPOUND_STRING("VENUSAURITE G"),
+        COMPOUND_STRING("CHARIZARDITE G"),
+        COMPOUND_STRING("BLASTOISINITE G"),
+        COMPOUND_STRING("BUTTERFREENITE G"),
+        COMPOUND_STRING("PIKACHUITE G"),
+        COMPOUND_STRING("MEOWTHITE G"),
+        COMPOUND_STRING("MACHAMPITE G"),
+        COMPOUND_STRING("GENGARITE G"),
+        COMPOUND_STRING("KINGLERITE G"),
+        COMPOUND_STRING("LAPRASITE G"),
+        COMPOUND_STRING("EEVEENITE G"),
+        COMPOUND_STRING("SNORLAXITE G"),
+        COMPOUND_STRING("GARBODORITE G"),
         gText_Exit
     }
 };

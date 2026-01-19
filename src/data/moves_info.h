@@ -495,7 +495,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "scythes, claws, etc."),
         .effect = EFFECT_HIT,
         .power = 50,
-        .type = TYPE_NORMAL,
+        .type = TYPE_STEEL,
         .accuracy = 95,
         .pp = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -1912,7 +1912,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "then slams the foe."),
         .effect = EFFECT_HIT,
         .power = 80,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
@@ -6597,7 +6597,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Rock Smash"),
         .description = COMPOUND_STRING(
             "A rock-crushing attack\n"
-            "that may lower Defense."),
+            "that lowers Defense."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 40 : 20,
         .type = TYPE_FIGHTING,
@@ -6609,7 +6609,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .makesContact = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
-            .chance = 50,
+            .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_BETTER_WITH_GOOD_CONDITION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

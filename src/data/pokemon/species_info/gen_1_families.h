@@ -15826,7 +15826,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sScytherLevelUpLearnset,
         .teachableLearnset = sScytherTeachableLearnset,
         .eggMoveLearnset = sScytherEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_SCIZOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SCIZOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
                                 {EVO_ITEM, ITEM_BLACK_AUGURITE, SPECIES_KLEAVOR},
                                 {EVO_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR}),
     },

@@ -301,7 +301,7 @@ script VerdanturfTown_EventScript_ZinniaMeeting {
 	applymovement(7, Movement_VerdanturfTown_WhismurEmote)
 	playmoncry(SPECIES_WHISMUR, CRY_MODE_NORMAL)
 	waitmoncry
-	msgbox("ZINNIA: Actually, if you don't mind,\nI could use your help.\pThat stone he was talking about...\nI was looking for it in METEOR FALLS when\nTEAM AQUA got to it before me.\pCould you do me a favor and take it\nwith you?\pI need it at full power, and to get\nit there, it needs to be used.\pI have an extra armband, so if\nI just...")
+	msgbox("ZINNIA: Actually, if you don't mind,\nI could use your help.\pThat stone he was talking about...\nI was looking for it in METEOR FALLS\lwhen TEAM AQUA got to it before me.\pCould you do me a favor and take it\nwith you?\pI need it at full power, and to get\nit there, it needs to be used.\pI have an extra armband, so if\nI just...")
 	playse(SE_CLICK)
 	msgbox("--CLICK--\pZINNIA: There we go. Here, I'm sure\nit'll come in handy for you.")
 	giveitem(ITEM_MEGA_RING)

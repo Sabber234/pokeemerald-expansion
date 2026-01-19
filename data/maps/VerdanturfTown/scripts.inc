@@ -815,7 +815,7 @@ VerdanturfTown_EventScript_ZinniaMeeting_Text_0:
 
 VerdanturfTown_EventScript_ZinniaMeeting_Text_1:
 # 304 "data/maps/VerdanturfTown/scripts.pory"
-	.string "ZINNIA: Actually, if you don't mind,\nI could use your help.\pThat stone he was talking about...\nI was looking for it in METEOR FALLS when\nTEAM AQUA got to it before me.\pCould you do me a favor and take it\nwith you?\pI need it at full power, and to get\nit there, it needs to be used.\pI have an extra armband, so if\nI just...$"
+	.string "ZINNIA: Actually, if you don't mind,\nI could use your help.\pThat stone he was talking about...\nI was looking for it in METEOR FALLS\lwhen TEAM AQUA got to it before me.\pCould you do me a favor and take it\nwith you?\pI need it at full power, and to get\nit there, it needs to be used.\pI have an extra armband, so if\nI just...$"
 
 VerdanturfTown_EventScript_ZinniaMeeting_Text_2:
 # 306 "data/maps/VerdanturfTown/scripts.pory"

@@ -2815,7 +2815,7 @@ SlateportCity_EventScript_Lighthouse_2:
 # 1408 "data/maps/SlateportCity/scripts.pory"
 	msgbox SlateportCity_EventScript_Lighthouse_Text_2
 # 1409 "data/maps/SlateportCity/scripts.pory"
-	randomelement 1, 2, 3, 4, 5, 6, 7, 8, 9
+	randomelement 1, 2, 3, 4, 5, 6
 # 1410 "data/maps/SlateportCity/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq SlateportCity_EventScript_Lighthouse_5
@@ -2834,19 +2834,10 @@ SlateportCity_EventScript_Lighthouse_2:
 # 1430 "data/maps/SlateportCity/scripts.pory"
 	compare VAR_RESULT, 6
 	goto_if_eq SlateportCity_EventScript_Lighthouse_10
-# 1434 "data/maps/SlateportCity/scripts.pory"
-	compare VAR_RESULT, 7
-	goto_if_eq SlateportCity_EventScript_Lighthouse_11
-# 1438 "data/maps/SlateportCity/scripts.pory"
-	compare VAR_RESULT, 8
-	goto_if_eq SlateportCity_EventScript_Lighthouse_12
-# 1442 "data/maps/SlateportCity/scripts.pory"
-	compare VAR_RESULT, 9
-	goto_if_eq SlateportCity_EventScript_Lighthouse_13
 SlateportCity_EventScript_Lighthouse_4:
-# 1446 "data/maps/SlateportCity/scripts.pory"
+# 1434 "data/maps/SlateportCity/scripts.pory"
 	waitse
-# 1447 "data/maps/SlateportCity/scripts.pory"
+# 1435 "data/maps/SlateportCity/scripts.pory"
 	releaseall
 	goto SlateportCity_EventScript_Lighthouse_1
 
@@ -2889,27 +2880,6 @@ SlateportCity_EventScript_Lighthouse_10:
 # 1431 "data/maps/SlateportCity/scripts.pory"
 	giveegg SPECIES_POPPLIO
 # 1432 "data/maps/SlateportCity/scripts.pory"
-	setflag FLAG_RECEIVED_SLATEPORT_EGG
-	goto SlateportCity_EventScript_Lighthouse_4
-
-SlateportCity_EventScript_Lighthouse_11:
-# 1435 "data/maps/SlateportCity/scripts.pory"
-	giveegg SPECIES_GROOKEY
-# 1436 "data/maps/SlateportCity/scripts.pory"
-	setflag FLAG_RECEIVED_SLATEPORT_EGG
-	goto SlateportCity_EventScript_Lighthouse_4
-
-SlateportCity_EventScript_Lighthouse_12:
-# 1439 "data/maps/SlateportCity/scripts.pory"
-	giveegg SPECIES_SCORBUNNY
-# 1440 "data/maps/SlateportCity/scripts.pory"
-	setflag FLAG_RECEIVED_SLATEPORT_EGG
-	goto SlateportCity_EventScript_Lighthouse_4
-
-SlateportCity_EventScript_Lighthouse_13:
-# 1443 "data/maps/SlateportCity/scripts.pory"
-	giveegg SPECIES_SOBBLE
-# 1444 "data/maps/SlateportCity/scripts.pory"
 	setflag FLAG_RECEIVED_SLATEPORT_EGG
 	goto SlateportCity_EventScript_Lighthouse_4
 

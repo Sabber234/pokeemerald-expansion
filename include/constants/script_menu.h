@@ -124,9 +124,7 @@
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_BERRY_PLOT                   114
 #define MULTI_GAME_CORNER_PKMN             115
-#define MULTI_ANABEL_MEGAS                 116
-#define MULTI_ANABEL_GMEGAS                117
-#define MULTI_ANABEL_COLLECTIONS           118
+#define MULTI_ANABEL_COLLECTIONS           116
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

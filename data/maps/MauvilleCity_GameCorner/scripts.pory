@@ -819,7 +819,7 @@ script MauvilleCity_GameCorner_EventScript_PkmnClerk {
 			showmonpic(SPECIES_ZANGOOSE, 10, 3)
 			msgbox("The KNUCKLE BADGE randomly gives you\neither ZANGOOSE,", MSGBOX_DEFAULT)
 			hidemonpic
-			showmonpic(SPECIES_ZANGOOSE, 10, 3)
+			showmonpic(SPECIES_SEVIPER, 10, 3)
 			msgbox("or SEVIPER.", MSGBOX_DEFAULT)
 			hidemonpic
 			msgbox("Will you take this chance?", MSGBOX_YESNO)

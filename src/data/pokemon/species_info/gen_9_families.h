@@ -66,6 +66,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sSprigatitoLevelUpLearnset,
         .teachableLearnset = sSprigatitoTeachableLearnset,
         .eggMoveLearnset = sSprigatitoEggMoveLearnset,
+        .perfectIVCount = 3,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_FLORAGATO}),
     },
 
@@ -260,6 +261,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sFuecocoLevelUpLearnset,
         .teachableLearnset = sFuecocoTeachableLearnset,
         .eggMoveLearnset = sFuecocoEggMoveLearnset,
+        .perfectIVCount = 3,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CROCALOR}),
     },
 
@@ -454,6 +456,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sQuaxlyLevelUpLearnset,
         .teachableLearnset = sQuaxlyTeachableLearnset,
         .eggMoveLearnset = sQuaxlyEggMoveLearnset,
+        .perfectIVCount = 3,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_QUAXWELL}),
     },
 
@@ -7965,7 +7968,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_TERA_SHIFT, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_TERA_SHIFT, ABILITY_NONE, ABILITY_CLEAR_BODY },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Terapagos"),
         .cryId = CRY_TERAPAGOS,

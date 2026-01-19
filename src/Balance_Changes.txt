@@ -1,0 +1,19 @@
+List of balance changes.
+
+Pokemon:
+    - Mienfoo -> Evolves at lvl 36 (from 50)
+    - Petilil -> Evolves to Hisuian Liligant when exposed to a Leaf Stone.
+    - Quilava -> Evolves to Hisuian Typhlosion after level 36 while knowing a Ghost-type move (updated learnset to learn Ghost-type moves).
+    - Typhlosion Hisuian -> Updated learnset to better match Gen IX.
+    - Dartrix -> Evolves to Hisuian Decidueye after level 34 while knowing a Fighting-type move (updated learnset to learn Fighting-type moves).
+    - Decidueye Hisuian -> Updated learnset to better match Gen IX.
+    - Meltan buffed stat total from 300 to 420. Increased level-up pool. Evolves when holding Melmetalite G.
+
+Moves:
+
+
+Abilities:
+
+
+Other notes:
+    - Added Gigantamax forms as megas (with stat boosts and abilities)

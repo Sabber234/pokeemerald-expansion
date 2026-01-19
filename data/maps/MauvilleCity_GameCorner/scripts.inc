@@ -1660,7 +1660,7 @@ MauvilleCity_GameCorner_EventScript_PkmnClerk_13:
 # 821 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	hidemonpic
 # 822 "data/maps/MauvilleCity_GameCorner/scripts.pory"
-	showmonpic SPECIES_ZANGOOSE, 10, 3
+	showmonpic SPECIES_SEVIPER, 10, 3
 # 823 "data/maps/MauvilleCity_GameCorner/scripts.pory"
 	msgbox MauvilleCity_GameCorner_EventScript_PkmnClerk_Text_9, MSGBOX_DEFAULT
 # 824 "data/maps/MauvilleCity_GameCorner/scripts.pory"
