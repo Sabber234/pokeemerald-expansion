@@ -82,11 +82,17 @@ LavaridgeTown_EventScript_RivalExit::
 	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit2
 	removeobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
 	setvar VAR_LAVARIDGE_TOWN_STATE, 2
+	goto_if_set FLAG_DEFEATED_ANABEL_1, LavaridgeTown_EventScript_CallFromAnabel
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
 	end
+
+LavaridgeTown_EventScript_CallFromAnabel::
+	pokenavcall LavaridgeTown_Text_CallFromAnabel
+	setflag FLAG_UNLOCKED_ANABEL_2
+	return
 
 LavaridgeTown_EventScript_PlayMayMusic::
 	playbgm MUS_ENCOUNTER_MAY, TRUE
@@ -247,8 +253,13 @@ LavaridgeTown_EventScript_EggWoman::
 	end 
 
 LavaridgeTown_EventScript_ReceivedEgg::
+	goto_if_set FLAG_BADGE04_GET, LavaridgeTown_EventScript_EggMegaStone
 	msgbox LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare, MSGBOX_DEFAULT
 	release
+	end
+
+LavaridgeTown_EventScript_EggMegaStone::
+	call LavaridgeTown_EventScript_EggGiveMegaStone
 	end
 
 LavaridgeTown_EventScript_NoRoomForEgg::
@@ -293,7 +304,8 @@ LavaridgeTown_Text_MayExplainGoGogglesChallengeDad:
 	.string "want to lose to me, I bet!\p"
 	.string "{PLAYER}{KUN}, I think I should challenge\n"
 	.string "your dad in PETALBURG GYM.\p"
-	.string "See you again!$"
+	.string "You should do so too after checking\n"
+	.string "out the desert. See you again!$"
 
 LavaridgeTown_Text_BrendanNiceBadgesTakeThis:
 	.string "BRENDAN: {PLAYER}, hey, it's been a while.\n"
@@ -315,7 +327,17 @@ LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad:
 	.string "the GYM LEADER of PETALBURG.\p"
 	.string "Unlike you, {PLAYER}, your dad looks like\n"
 	.string "he really is tough.\p"
-	.string "See you around!$"
+	.string "Maybe you should challenge him too after\n"
+	.string "checking out the desert. See you around!$"
+
+LavaridgeTown_Text_CallFromAnabel:
+	.string "Hey, {PLAYER}, it's ANABEL.\n"
+	.string "This is your number, yes?\p"
+	.string "Never mind how I got it. If you ever\n"
+	.string "feel like battling me again in\l"
+	.string "Fallarbor I might have a new\l" 
+	.string "collection of stones for you.\p"
+	.string "Feel free to stop by whenever.$"
 
 LavaridgeTown_Text_HaveEggWillYouTakeIt:
 	.string "I have here an EGG.\p"
@@ -409,13 +431,59 @@ script LavaridgeTown_EventScript_RandomEgg {
     randomelement(1,2,3)
 		if(var(VAR_RESULT) == 1) {
 			giveegg(SPECIES_GROOKEY)
+			setflag(FLAG_GROOKEY_EGG)
 		}
 		elif(var(VAR_RESULT) == 2) {
 			giveegg(SPECIES_SCORBUNNY)
+			setflag(FLAG_SCORBUNNY_EGG)
 		}
 		elif(var(VAR_RESULT) == 3) {
 			giveegg(SPECIES_SOBBLE)
+			setflag(FLAG_SOBBLE_EGG)
 		}
     releaseall
     end
+}
+
+script LavaridgeTown_EventScript_AuspiciousOrMalicious {
+	lock
+	faceplayer
+	if(flag(FLAG_LAVARIDGE_OBTAINED_ARMOR) == FALSE) {
+		msgbox("Do you see yourself as auspicious?\pOr maybe you're more... malicious.", MSGBOX_DEFAULT)
+		multichoice(20, 8, MULTI_LAVARIDGE_CHARCADET, 1)
+		if(var(VAR_RESULT) == 0) {
+			msgbox("Hehe... I see... Here.", MSGBOX_DEFAULT)
+			giveitem(ITEM_AUSPICIOUS_ARMOR)
+		}
+		elif(var(VAR_RESULT) == 1) {
+			msgbox("Hehe... You're like me...", MSGBOX_DEFAULT)
+			giveitem(ITEM_MALICIOUS_ARMOR)
+		}
+		setflag(FLAG_LAVARIDGE_OBTAINED_ARMOR)
+	}
+	else {
+		msgbox("Stick to your ideals...\nAlways... Heh...", MSGBOX_DEFAULT)
+	}
+	release
+}
+
+script LavaridgeTown_EventScript_EggGiveMegaStone {
+	if(flag(FLAG_EGG_MEGA_STONE) == FALSE) {
+		msgbox("Oh my, you really\ndefeated FLANNERY?\pThe egg I gave you...\nI want you to have this.", MSGBOX_DEFAULT)
+		if(flag(FLAG_GROOKEY_EGG) == TRUE) {
+			giveitem(ITEM_RILLABOOMITE_G)
+		}
+		elif(flag(FLAG_SCORBUNNY_EGG) == TRUE) {
+			giveitem(ITEM_CINDERACITE_G)
+		}
+		elif(flag(FLAG_SOBBLE_EGG) == TRUE) {
+			giveitem(ITEM_INTELEONITE_G)
+		}
+		setflag(FLAG_EGG_MEGA_STONE)
+	}
+	else {
+		msgbox(LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare, MSGBOX_DEFAULT)
+	}
+	releaseall
+	end
 }

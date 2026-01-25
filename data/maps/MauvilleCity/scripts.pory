@@ -689,6 +689,7 @@ script MauvilleCity_EventScript_WhismurChase {
 	//waitmovement
 	//special(RemoveCameraObject)
 	setvar(VAR_MAUVILLE_CITY_STATE, 2)
+	setvar(VAR_ZINNIA_EVENTS, 2)
 	removeobject(13)
 	removeobject(12)
 	fadedefaultbgm

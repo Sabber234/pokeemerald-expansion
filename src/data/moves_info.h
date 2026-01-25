@@ -19203,9 +19203,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "High critical hit ratio. Sets\n"
             "Splinters that hurt the foe."),
         .effect = EFFECT_STONE_AXE,
-        .power = 65,
+        .power = 70,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 95,
+        .criticalHitStage = 1,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,

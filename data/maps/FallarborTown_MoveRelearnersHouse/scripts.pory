@@ -245,6 +245,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nVENUSAUR with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -257,6 +258,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_VENUSAURITE)
+			releaseall
 			end
 			}
 		}
@@ -265,6 +267,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nCHARIZARD with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -277,6 +280,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_CHARIZARDITE_X)
+			releaseall
 			end
 			}
 		}
@@ -285,6 +289,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nCHARIZARD with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -297,6 +302,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_CHARIZARDITE_Y)
+			releaseall
 			end
 			}
 		}
@@ -305,6 +311,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nBLASTOISE with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -317,6 +324,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_BLASTOISINITE)
+			releaseall
 			end
 			}
 		}
@@ -325,6 +333,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nBEEDRILL with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -337,6 +346,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_BEEDRILLITE)
+			releaseall
 			end
 			}
 		}
@@ -345,6 +355,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nPIDGEOT with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -357,6 +368,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_PIDGEOTITE)
+			releaseall
 			end
 			}
 		}
@@ -365,6 +377,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nALAKAZAM with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -377,6 +390,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_ALAKAZITE)
+			releaseall
 			end
 			}
 		}
@@ -385,6 +399,7 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			if(var(VAR_RESULT) == FALSE) {
 				msgbox(format("ANABEL: I'd like you to defeat my\nSLOWBRO with one of your own."), MSGBOX_DEFAULT)
 				call(FallarborTown_AnabelsHouse_EventScript_MegaBattles)
+				releaseall
 				end
 			}
 			else {
@@ -397,10 +412,12 @@ script FallarborTown_AnabelsHouse_EventScript_MegaBattles {
 			clearflag(FLAG_SMART_WILDS)
 			msgbox(format("ANABEL: Well done, you've earned\nthis."), MSGBOX_DEFAULT)
 			giveitem(ITEM_SLOWBRONITE)
+			releaseall
 			end
 			}
 		}
 		else {
+			releaseall
 			end
 		}
 }

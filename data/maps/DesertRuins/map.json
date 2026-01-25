@@ -26,6 +26,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DesertRuins_EventScript_Regirock",
       "flag": "FLAG_HIDE_REGIROCK"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ZINNIA",
+      "x": 8,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DesertRuins_EventScript_ZinniaBattle",
+      "flag": "FLAG_DEFEATED_ZINNIA_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WHISMUR)",
+      "x": 9,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_DEFEATED_ZINNIA_1"
     }
   ],
   "warp_events": [
@@ -51,7 +77,17 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ZINNIA_EVENTS",
+      "var_value": "3",
+      "script": "DesertRuins_EventScript_ZinniaStop"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

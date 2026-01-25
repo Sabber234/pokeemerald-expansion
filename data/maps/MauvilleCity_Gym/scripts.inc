@@ -274,12 +274,12 @@ MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "You've powered the door open!$"
 
 MauvilleCity_Gym_Text_KirkIntro:
-	.string "My electric soul, it'll shatter your\n"
+	.string "My electric soul, it'll snipe your\n"
 	.string "dreams whole, whoa-yeahah!$"
 
 MauvilleCity_Gym_Text_KirkDefeat:
-	.string "That was plugged in, amped up,\n"
-	.string "over-driven electric, man!$"
+	.string "Counting or not counting gang\n"
+	.string "violence?$"
 
 MauvilleCity_Gym_Text_KirkPostBattle:
 	.string "POKéMON and rock, it's all about heart,\n"

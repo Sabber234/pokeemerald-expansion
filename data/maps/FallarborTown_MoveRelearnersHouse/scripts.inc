@@ -469,27 +469,29 @@ FallarborTown_AnabelsHouse_EventScript_MegaBattles::
 # 243 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_2
-# 263 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 265 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_5
-# 283 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 287 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_11
-# 303 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 309 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_17
-# 323 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 331 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_23
-# 343 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 353 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_29
-# 363 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 375 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 6
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_35
-# 383 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 397 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, 7
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_40
+# 420 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_2:
@@ -498,50 +500,54 @@ FallarborTown_AnabelsHouse_EventScript_MegaBattles_2:
 # 245 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_7
-# 251 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_CATCHING_DISABLED
 # 252 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_RUNNING_DISABLED
+	setflag FLAG_CATCHING_DISABLED
 # 253 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_SMART_WILDS
+	setflag FLAG_RUNNING_DISABLED
 # 254 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setwildbattle SPECIES_VENUSAUR_MEGA, 50
+	setflag FLAG_SMART_WILDS
 # 255 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_VENUSAUR_MEGA, 50
 # 256 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_CATCHING_DISABLED
+	dowildbattle
 # 257 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_SMART_WILDS
+	clearflag FLAG_CATCHING_DISABLED
 # 258 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+	clearflag FLAG_SMART_WILDS
 # 259 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+# 260 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_VENUSAURITE
+# 261 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_5:
-# 264 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 266 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_CHARIZARD, OPEN_PARTY_SCREEN
-# 265 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 267 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_13
-# 271 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_CATCHING_DISABLED
-# 272 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_RUNNING_DISABLED
-# 273 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_SMART_WILDS
 # 274 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setwildbattle SPECIES_CHARIZARD_MEGA_X, 50
+	setflag FLAG_CATCHING_DISABLED
 # 275 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	dowildbattle
+	setflag FLAG_RUNNING_DISABLED
 # 276 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_CATCHING_DISABLED
+	setflag FLAG_SMART_WILDS
 # 277 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_SMART_WILDS
+	setwildbattle SPECIES_CHARIZARD_MEGA_X, 50
 # 278 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+	dowildbattle
 # 279 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	clearflag FLAG_CATCHING_DISABLED
+# 280 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	clearflag FLAG_SMART_WILDS
+# 281 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+# 282 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_CHARIZARDITE_X
+# 283 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_7:
@@ -549,211 +555,239 @@ FallarborTown_AnabelsHouse_EventScript_MegaBattles_7:
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_1, MSGBOX_DEFAULT
 # 247 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 248 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_11:
-# 284 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 288 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_CHARIZARD, OPEN_PARTY_SCREEN
-# 285 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 289 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_19
-# 291 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_CATCHING_DISABLED
-# 292 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_RUNNING_DISABLED
-# 293 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_SMART_WILDS
-# 294 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setwildbattle SPECIES_CHARIZARD_MEGA_Y, 50
-# 295 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	dowildbattle
 # 296 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_CATCHING_DISABLED
+	setflag FLAG_CATCHING_DISABLED
 # 297 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_SMART_WILDS
+	setflag FLAG_RUNNING_DISABLED
 # 298 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+	setflag FLAG_SMART_WILDS
 # 299 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	setwildbattle SPECIES_CHARIZARD_MEGA_Y, 50
+# 300 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	dowildbattle
+# 301 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	clearflag FLAG_CATCHING_DISABLED
+# 302 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	clearflag FLAG_SMART_WILDS
+# 303 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+# 304 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_CHARIZARDITE_Y
+# 305 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_13:
-# 266 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 268 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_3, MSGBOX_DEFAULT
-# 267 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 269 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 270 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_17:
-# 304 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 310 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_BLASTOISE, OPEN_PARTY_SCREEN
-# 305 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 311 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_25
-# 311 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_CATCHING_DISABLED
-# 312 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_RUNNING_DISABLED
-# 313 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setflag FLAG_SMART_WILDS
-# 314 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	setwildbattle SPECIES_BLASTOISE_MEGA, 50
-# 315 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	dowildbattle
-# 316 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_CATCHING_DISABLED
-# 317 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	clearflag FLAG_SMART_WILDS
 # 318 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+	setflag FLAG_CATCHING_DISABLED
 # 319 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	setflag FLAG_RUNNING_DISABLED
+# 320 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	setflag FLAG_SMART_WILDS
+# 321 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	setwildbattle SPECIES_BLASTOISE_MEGA, 50
+# 322 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	dowildbattle
+# 323 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	clearflag FLAG_CATCHING_DISABLED
+# 324 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	clearflag FLAG_SMART_WILDS
+# 325 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
+# 326 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_BLASTOISINITE
+# 327 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_19:
-# 286 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 290 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_3, MSGBOX_DEFAULT
-# 287 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 291 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 292 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_23:
-# 324 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 332 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_BEEDRILL, OPEN_PARTY_SCREEN
-# 325 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 333 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_31
-# 331 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 340 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_CATCHING_DISABLED
-# 332 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 341 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_RUNNING_DISABLED
-# 333 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 342 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_SMART_WILDS
-# 334 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 343 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setwildbattle SPECIES_BEEDRILL_MEGA, 50
-# 335 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 344 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	dowildbattle
-# 336 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 345 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_CATCHING_DISABLED
-# 337 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 346 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_SMART_WILDS
-# 338 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 347 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
-# 339 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 348 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_BEEDRILLITE
+# 349 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_25:
-# 306 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 312 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_4, MSGBOX_DEFAULT
-# 307 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 313 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 314 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_29:
-# 344 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 354 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_PIDGEOT, OPEN_PARTY_SCREEN
-# 345 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 355 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_37
-# 351 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 362 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_CATCHING_DISABLED
-# 352 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 363 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_RUNNING_DISABLED
-# 353 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 364 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_SMART_WILDS
-# 354 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 365 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setwildbattle SPECIES_PIDGEOT_MEGA, 50
-# 355 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 366 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	dowildbattle
-# 356 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 367 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_CATCHING_DISABLED
-# 357 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 368 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_SMART_WILDS
-# 358 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 369 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
-# 359 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 370 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_PIDGEOTITE
+# 371 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_31:
-# 326 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 334 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_5, MSGBOX_DEFAULT
-# 327 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 335 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 336 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_35:
-# 364 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 376 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_ALAKAZAM, OPEN_PARTY_SCREEN
-# 365 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 377 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_43
-# 371 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 384 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_CATCHING_DISABLED
-# 372 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 385 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_RUNNING_DISABLED
-# 373 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 386 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_SMART_WILDS
-# 374 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 387 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setwildbattle SPECIES_ALAKAZAM_MEGA, 50
-# 375 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 388 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	dowildbattle
-# 376 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 389 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_CATCHING_DISABLED
-# 377 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 390 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_SMART_WILDS
-# 378 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 391 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
-# 379 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 392 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_ALAKAZITE
+# 393 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_37:
-# 346 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 356 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_6, MSGBOX_DEFAULT
-# 347 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 357 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 358 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_40:
-# 384 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 398 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	checkspecies SPECIES_SLOWBRO, OPEN_PARTY_SCREEN
-# 385 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 399 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq FallarborTown_AnabelsHouse_EventScript_MegaBattles_46
-# 391 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 406 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_CATCHING_DISABLED
-# 392 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 407 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_RUNNING_DISABLED
-# 393 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 408 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setflag FLAG_SMART_WILDS
-# 394 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 409 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	setwildbattle SPECIES_SLOWBRO_MEGA, 50
-# 395 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 410 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	dowildbattle
-# 396 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 411 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_CATCHING_DISABLED
-# 397 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 412 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	clearflag FLAG_SMART_WILDS
-# 398 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 413 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2, MSGBOX_DEFAULT
-# 399 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 414 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	giveitem ITEM_SLOWBRONITE
+# 415 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_43:
-# 366 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 378 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_7, MSGBOX_DEFAULT
-# 367 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 379 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 380 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_46:
-# 386 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 400 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	msgbox FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_8, MSGBOX_DEFAULT
-# 387 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 401 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	call FallarborTown_AnabelsHouse_EventScript_MegaBattles
+# 402 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+	releaseall
 	end
 
 
@@ -832,37 +866,37 @@ FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_1:
 	.string "VENUSAUR with one of your own.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_2:
-# 258 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 259 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: Well done, you've earned\n"
 	.string "this.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_3:
-# 266 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 268 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: I'd like you to defeat my\n"
 	.string "CHARIZARD with one of your own.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_4:
-# 306 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 312 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: I'd like you to defeat my\n"
 	.string "BLASTOISE with one of your own.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_5:
-# 326 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 334 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: I'd like you to defeat my\n"
 	.string "BEEDRILL with one of your own.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_6:
-# 346 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 356 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: I'd like you to defeat my\n"
 	.string "PIDGEOT with one of your own.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_7:
-# 366 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 378 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: I'd like you to defeat my\n"
 	.string "ALAKAZAM with one of your own.$"
 
 FallarborTown_AnabelsHouse_EventScript_MegaBattles_Text_8:
-# 386 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
+# 400 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.string "ANABEL: I'd like you to defeat my\n"
 	.string "SLOWBRO with one of your own.$"
 

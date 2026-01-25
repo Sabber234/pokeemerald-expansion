@@ -377,6 +377,12 @@ static const struct MenuAction MultichoiceList_AnabelCollections[] =
     {COMPOUND_STRING("EXPANDED COLLECTION")},
 };
 
+static const struct MenuAction MultichoiceList_LavaridgeCharcadet[] = 
+{
+    {COMPOUND_STRING("Auspicious?")},
+    {COMPOUND_STRING("Malicious.")},
+};
+
 static const struct MenuAction MultichoiceList_HowsFishing[] =
 {
     {COMPOUND_STRING("Excellent")},
@@ -938,6 +944,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),
     [MULTI_GAME_CORNER_PKMN]           = MULTICHOICE(MultichoiceList_GameCornerPkmn),
     [MULTI_ANABEL_COLLECTIONS]         = MULTICHOICE(MultichoiceList_AnabelCollections),
+    [MULTI_LAVARIDGE_CHARCADET]        = MULTICHOICE(MultichoiceList_LavaridgeCharcadet),
     [MULTI_HOWS_FISHING]               = MULTICHOICE(MultichoiceList_HowsFishing),
     [MULTI_UNUSED_51]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),

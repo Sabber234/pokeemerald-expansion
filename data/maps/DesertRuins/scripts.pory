@@ -1,0 +1,160 @@
+raw `DesertRuins_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, DesertRuins_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, DesertRuins_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, DesertRuins_OnTransition
+	.byte 0
+
+DesertRuins_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, DesertRuins_EventScript_TryRemoveRegirock
+	end
+
+DesertRuins_EventScript_TryRemoveRegirock::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+DesertRuins_OnLoad:
+	call_if_unset FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_HideRegiEntrance
+	end
+
+DesertRuins_EventScript_HideRegiEntrance::
+	setmetatile 7, 19, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 8, 19, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 9, 19, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 7, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
+	setmetatile 8, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
+	setmetatile 9, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
+	return
+
+DesertRuins_OnTransition:
+	setflag FLAG_LANDMARK_DESERT_RUINS
+	call_if_unset FLAG_DEFEATED_REGIROCK, DesertRuins_EventScript_ShowRegirock
+	end
+
+DesertRuins_EventScript_ShowRegirock::
+	clearflag FLAG_HIDE_REGIROCK
+	return
+
+DesertRuins_EventScript_CaveEntranceMiddle::
+	lockall
+	goto_if_set FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_BigHoleInWall
+	braillemsgbox DesertRuins_Braille_UseRockSmash
+	releaseall
+	end
+
+DesertRuins_EventScript_BigHoleInWall::
+	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
+	releaseall
+	end
+
+DesertRuins_EventScript_CaveEntranceSide::
+	lockall
+	braillemsgbox DesertRuins_Braille_UseRockSmash
+	releaseall
+	end
+
+DesertRuins_EventScript_Regirock::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_REGIROCK, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_REGIROCK, 40
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, DesertRuins_EventScript_DefeatedRegirock
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, DesertRuins_EventScript_RanFromRegirock
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, DesertRuins_EventScript_RanFromRegirock
+	setflag FLAG_DEFEATED_REGIROCK
+	release
+	end
+
+DesertRuins_EventScript_DefeatedRegirock::
+	setflag FLAG_DEFEATED_REGIROCK
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+DesertRuins_EventScript_RanFromRegirock::
+	setvar VAR_0x8004, SPECIES_REGIROCK
+	goto Common_EventScript_LegendaryFlewAway
+	end
+`
+
+script DesertRuins_EventScript_ZinniaBattle {
+    lockall
+    faceplayer
+    msgbox("Well, it doesn't seem like there's\nanything in there.\lOnly some weird dots on the wall.\pBut since I have you here,\n{PLAYER}, how about a battle?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1) {
+        msgbox("Great! I've been hoping for a\nchance to battle you!\pDon't hold anything back!", MSGBOX_DEFAULT)
+        playmoncry(SPECIES_WHISMUR, CRY_MODE_NORMAL)
+        waitmoncry
+        trainerbattle_no_intro(TRAINER_ZINNIA_DESERTRUINS, ZinniaDesertRuinsPostBattle)
+        msgbox("Niiice, real nice, {PLAYER}!\nOhhh,  I really felt that one!\lFull points to you!\p...\p... ...\pHey, {PLAYER}...\pThe actions that you're taking\nnow...\pAre they based on ideals you\ncling to?\pOr are they based on actual\ntruths?\lAnd if they are...\pHow much of the truth do you\nthink you know?")
+        playmoncry(SPECIES_WHISMUR, CRY_MODE_NORMAL)
+        applymovement(3, DesertRuins_Movement_WhismurBounce)
+        waitmoncry
+        waitmovement
+        applymovement(2, DesertRuins_Movement_TurnRight)
+		waitmovement
+        msgbox("Yes Ma'am! Moving out!", MSGBOX_DEFAULT)
+        faceplayer
+        msgbox("Thanks for battling me, {PLAYER}.\pIf it isn't too much trouble, I\nhope I can borrow your strength in\lthe near future.\pDon't worry, when that time comes\nI'll tell you everything.", MSGBOX_DEFAULT)
+        applymovement(2, DesertRuins_Movement_ZinniaLeave)
+		applymovement(3, DesertRuins_Movement_WhismurLeave)
+        waitmovement
+		removeobject(2)
+        playse(SE_DOOR)
+		waitse
+		removeobject(3)
+        playse(SE_DOOR)
+        setflag(FLAG_DEFEATED_ZINNIA_1)
+		setvar(VAR_ZINNIA_EVENTS, 4)
+		call(lvlcapmsg)
+    }
+    elif(var(VAR_RESULT) == 0) {
+        msgbox("Fine, fine, I ge-e-et it, you\nneed to prepare first.\pJust give me the word whenever\nyou're ready, yeah?", MSGBOX_DEFAULT)
+    }
+    releaseall
+    end
+}
+
+text ZinniaDesertRuinsPostBattle {
+    "Yes! That's it! That's just\nwhat I was looking for!"
+}
+
+movement DesertRuins_Movement_WhismurBounce {
+    emote_double_exclamation_mark
+    jump_in_place_right
+    jump_in_place_right
+}
+
+movement DesertRuins_Movement_TurnRight {
+    face_right
+}
+
+movement DesertRuins_Movement_ZinniaLeave {
+    walk_down * 7
+}
+
+movement DesertRuins_Movement_WhismurLeave {
+    walk_left
+    walk_down * 7
+}
+
+script DesertRuins_EventScript_ZinniaStop {
+	lockall
+	msgbox("ZINNIA: Hey, where are you going?", MSGBOX_DEFAULT)
+	applymovement(OBJ_EVENT_ID_PLAYER, DesertRuins_Movement_MoveUp)
+	waitmovement
+	releaseall
+	end
+}
+
+movement DesertRuins_Movement_MoveUp {
+	walk_up
+}

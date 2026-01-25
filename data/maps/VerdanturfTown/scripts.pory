@@ -312,13 +312,13 @@ script VerdanturfTown_EventScript_ZinniaMeeting {
 	waitmovement
 	removeobject(5)
 	removeobject(7)
-	setvar(VAR_ZINNIA_EVENTS, 2)
+	setvar(VAR_ZINNIA_EVENTS, 3)
 	releaseall
 	end
 }
 
 movement Movement_VerdanturfTown_WhismurEmote {
-	emote_x
+	emote_heart
 }
 
 movement Movement_VerdanturfTown_ZinniaLeave {

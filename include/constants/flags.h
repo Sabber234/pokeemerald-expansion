@@ -55,13 +55,13 @@
 #define FLAG_UNLOCKED_ANABEL_2    0x29 // Unlocks second Anabel fight.
 #define FLAG_RECEIVED_SLATEPORT_EGG    0x2A // Locks Slateport egg event to prevent duplication.
 #define FLAG_DISABLE_COLLISION    0x2B // Disables collision with tiles.
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
+#define FLAG_LAVARIDGE_OBTAINED_ARMOR    0x2C // Set when player obtains armor from Lavaridge Town.
+#define FLAG_GROOKEY_EGG     0x2D // Unused Flag
+#define FLAG_SCORBUNNY_EGG   0x2E // Unused Flag
+#define FLAG_SOBBLE_EGG      0x2F // Unused Flag
+#define FLAG_EGG_MEGA_STONE  0x30 // Unused Flag
+#define FLAG_HIDE_ZINNIA_2   0x31 // Unused Flag
+#define FLAG_DEFEATED_ZINNIA_1    0x32 // Set after defeating Zinnia in the Desert Ruins.
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag

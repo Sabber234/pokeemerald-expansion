@@ -1367,89 +1367,91 @@ MauvilleCity_EventScript_WhismurChase::
 # 691 "data/maps/MauvilleCity/scripts.pory"
 	setvar VAR_MAUVILLE_CITY_STATE, 2
 # 692 "data/maps/MauvilleCity/scripts.pory"
-	removeobject 13
+	setvar VAR_ZINNIA_EVENTS, 2
 # 693 "data/maps/MauvilleCity/scripts.pory"
-	removeobject 12
+	removeobject 13
 # 694 "data/maps/MauvilleCity/scripts.pory"
-	fadedefaultbgm
+	removeobject 12
 # 695 "data/maps/MauvilleCity/scripts.pory"
+	fadedefaultbgm
+# 696 "data/maps/MauvilleCity/scripts.pory"
 	releaseall
 	return
 
 
-# 698 "data/maps/MauvilleCity/scripts.pory"
-Movement_MauvilleCity_Exclamation:
 # 699 "data/maps/MauvilleCity/scripts.pory"
+Movement_MauvilleCity_Exclamation:
+# 700 "data/maps/MauvilleCity/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 702 "data/maps/MauvilleCity/scripts.pory"
+# 703 "data/maps/MauvilleCity/scripts.pory"
 Movement_MauvilleCity_WhismurRun1:
-# 703 "data/maps/MauvilleCity/scripts.pory"
-	walk_fast_up
-# 703 "data/maps/MauvilleCity/scripts.pory"
-	walk_fast_up
-# 703 "data/maps/MauvilleCity/scripts.pory"
-	walk_fast_up
-# 703 "data/maps/MauvilleCity/scripts.pory"
-	walk_fast_up
-# 703 "data/maps/MauvilleCity/scripts.pory"
+# 704 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_up
 # 704 "data/maps/MauvilleCity/scripts.pory"
+	walk_fast_up
+# 704 "data/maps/MauvilleCity/scripts.pory"
+	walk_fast_up
+# 704 "data/maps/MauvilleCity/scripts.pory"
+	walk_fast_up
+# 704 "data/maps/MauvilleCity/scripts.pory"
+	walk_fast_up
+# 705 "data/maps/MauvilleCity/scripts.pory"
 	face_left
 	step_end
 
-# 707 "data/maps/MauvilleCity/scripts.pory"
+# 708 "data/maps/MauvilleCity/scripts.pory"
 Movement_MauvilleCity_WhismurRun2:
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
-# 708 "data/maps/MauvilleCity/scripts.pory"
+# 709 "data/maps/MauvilleCity/scripts.pory"
 	walk_fast_left
 	step_end
 
-# 711 "data/maps/MauvilleCity/scripts.pory"
+# 712 "data/maps/MauvilleCity/scripts.pory"
 Movement_MauvilleCity_Camera:
-# 712 "data/maps/MauvilleCity/scripts.pory"
+# 713 "data/maps/MauvilleCity/scripts.pory"
 	walk_right
-# 712 "data/maps/MauvilleCity/scripts.pory"
+# 713 "data/maps/MauvilleCity/scripts.pory"
 	walk_right
-# 712 "data/maps/MauvilleCity/scripts.pory"
+# 713 "data/maps/MauvilleCity/scripts.pory"
 	walk_right
-# 712 "data/maps/MauvilleCity/scripts.pory"
+# 713 "data/maps/MauvilleCity/scripts.pory"
 	walk_right
 	step_end
 
-# 715 "data/maps/MauvilleCity/scripts.pory"
+# 716 "data/maps/MauvilleCity/scripts.pory"
 Movement_MauvilleCity_ResetCamera:
-# 716 "data/maps/MauvilleCity/scripts.pory"
+# 717 "data/maps/MauvilleCity/scripts.pory"
 	walk_left
-# 716 "data/maps/MauvilleCity/scripts.pory"
+# 717 "data/maps/MauvilleCity/scripts.pory"
 	walk_left
-# 716 "data/maps/MauvilleCity/scripts.pory"
+# 717 "data/maps/MauvilleCity/scripts.pory"
 	walk_left
-# 716 "data/maps/MauvilleCity/scripts.pory"
+# 717 "data/maps/MauvilleCity/scripts.pory"
 	walk_left
 	step_end
 

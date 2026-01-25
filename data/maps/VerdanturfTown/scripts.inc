@@ -699,7 +699,7 @@ VerdanturfTown_EventScript_ZinniaMeeting::
 # 314 "data/maps/VerdanturfTown/scripts.pory"
 	removeobject 7
 # 315 "data/maps/VerdanturfTown/scripts.pory"
-	setvar VAR_ZINNIA_EVENTS, 2
+	setvar VAR_ZINNIA_EVENTS, 3
 # 316 "data/maps/VerdanturfTown/scripts.pory"
 	releaseall
 	end
@@ -708,7 +708,7 @@ VerdanturfTown_EventScript_ZinniaMeeting::
 # 320 "data/maps/VerdanturfTown/scripts.pory"
 Movement_VerdanturfTown_WhismurEmote:
 # 321 "data/maps/VerdanturfTown/scripts.pory"
-	emote_x
+	emote_heart
 	step_end
 
 # 324 "data/maps/VerdanturfTown/scripts.pory"
