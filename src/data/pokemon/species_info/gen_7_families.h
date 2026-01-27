@@ -7489,7 +7489,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMeltanLevelUpLearnset,
         .teachableLearnset = sMeltanTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MELMETAL, CONDITIONS({IF_HOLD_ITEM, ITEM_MELMETALITE_G})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOLTEN_METAL, SPECIES_MELMETAL}),
     },
 
     [SPECIES_MELMETAL] =

@@ -1,0 +1,176 @@
+raw `MirageTower_4F_MapScripts::
+	.byte 0
+
+MirageTower_4F_EventScript_RootFossil::
+	lock
+	faceplayer
+	msgbox MirageTower_4F_Text_TakeRootFossil, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveRootFossil
+	giveitem ITEM_ROOT_FOSSIL
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	closemessage
+	setflag FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL
+	setflag FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL
+	removeobject LOCALID_MIRAGE_ROOT_FOSSIL
+	delay 30
+	setflag FLAG_CHOSE_ROOT_FOSSIL
+	goto MirageTower_4F_EventScript_CollapseMirageTower
+	end
+
+MirageTower_4F_EventScript_LeaveRootFossil::
+	msgbox MirageTower_4F_Text_LeftRootFossilAlone, MSGBOX_DEFAULT
+	release
+	end
+
+MirageTower_4F_EventScript_ClawFossil::
+	lock
+	faceplayer
+	msgbox MirageTower_4F_Text_TakeClawFossil, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveClawFossil
+	giveitem ITEM_CLAW_FOSSIL
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	closemessage
+	setflag FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL
+	setflag FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL
+	removeobject LOCALID_MIRAGE_CLAW_FOSSIL
+	delay 30
+	setflag FLAG_CHOSE_CLAW_FOSSIL
+	goto MirageTower_4F_EventScript_CollapseMirageTower
+	end
+
+MirageTower_4F_EventScript_LeaveClawFossil::
+	msgbox MirageTower_4F_Text_LeaveClawFossilAlone, MSGBOX_DEFAULT
+	release
+	end
+
+MirageTower_4F_EventScript_CollapseMirageTower::
+	setvar VAR_0x8004, 1   @ vertical pan
+	setvar VAR_0x8005, 1   @ horizontal pan
+	setvar VAR_0x8006, 32  @ num shakes
+	setvar VAR_0x8007, 2   @ shake delay
+	special ShakeCamera
+	waitstate
+	special DoMirageTowerCeilingCrumble
+	waitstate
+	setvar VAR_MIRAGE_TOWER_STATE, 1
+	clearflag FLAG_LANDMARK_MIRAGE_TOWER
+	warp MAP_ROUTE111, 19, 59
+	waitstate
+	release
+	end
+
+MirageTower_4F_Text_TakeRootFossil:
+	.string "You found the ROOT FOSSIL.\p"
+	.string "If this FOSSIL is taken, the ground\n"
+	.string "around it will likely crumble away…\p"
+	.string "Take the ROOT FOSSIL anyway?$"
+
+MirageTower_4F_Text_LeftRootFossilAlone:
+	.string "{PLAYER} left the ROOT FOSSIL alone.$"
+
+MirageTower_4F_Text_TakeClawFossil:
+	.string "You found the CLAW FOSSIL.\p"
+	.string "If this FOSSIL is taken, the ground\n"
+	.string "around it will likely crumble away…\p"
+	.string "Take the CLAW FOSSIL anyway?$"
+
+MirageTower_4F_Text_LeaveClawFossilAlone:
+	.string "{PLAYER} left the CLAW FOSSIL alone.$"
+
+`
+
+script MirageTower_4F_EventScript_ParadoxPast {
+    lockall
+    msgbox("A scarlet rock sits atop the sand.\nThere's something off about it...\pMove the rock?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1) {
+        //hideobjectat(4)
+        setflag(FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL)
+        removeobject(4)
+        playse(SE_CLICK)
+        msgbox("You push the rock aside.", MSGBOX_DEFAULT)
+        setvar(VAR_0x8004, 0)  
+		setvar(VAR_0x8005, 2)  
+		setvar(VAR_0x8006, 50)  
+		setvar(VAR_0x8007, 2)  
+		special(ShakeCamera)
+        delay(60)
+        msgbox("The floor trembles and the sand\nshifts!\pA creature lunges out from beneath\nthe sand!", MSGBOX_DEFAULT)
+        setflag(FLAG_SMART_WILDS)
+        randomelement(1,2,3,4,5,6)
+        if(var(VAR_RESULT) == 1) {
+            setwildbattle(SPECIES_GREAT_TUSK, 50)
+        }
+        elif(var(VAR_RESULT) == 2) {
+            setwildbattle(SPECIES_SCREAM_TAIL, 50)
+        }
+        elif(var(VAR_RESULT) == 3) {
+            setwildbattle(SPECIES_BRUTE_BONNET, 50)
+        }
+        elif(var(VAR_RESULT) == 4) {
+            setwildbattle(SPECIES_FLUTTER_MANE, 50)
+        }
+        elif(var(VAR_RESULT) == 5) {
+            setwildbattle(SPECIES_SLITHER_WING, 50)
+        }
+        else {
+            setwildbattle(SPECIES_SANDY_SHOCKS, 50)
+        }
+        dowildbattle
+        setflag(FLAG_CHOSE_ROOT_FOSSIL)
+        clearflag(FLAG_SMART_WILDS)
+        call(MirageTower_4F_EventScript_CollapseMirageTower)
+    }
+    else {
+
+    }
+    releaseall
+    end
+}
+
+script MirageTower_4F_EventScript_ParadoxFuture {
+    lockall
+    msgbox("A violet rock sits atop the sand.\nThere's something off about it...\pMove the rock?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1) {
+        //hideobjectat(4)
+        setflag(FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL)
+        removeobject(5)
+        playse(SE_CLICK)
+        msgbox("You push the rock aside.", MSGBOX_DEFAULT)
+        setvar(VAR_0x8004, 0)  
+		setvar(VAR_0x8005, 2)  
+		setvar(VAR_0x8006, 50)  
+		setvar(VAR_0x8007, 2)  
+		special(ShakeCamera)
+        delay(60)
+        msgbox("The floor trembles and the sand\nshifts!\pA creature lunges out from beneath\nthe sand!", MSGBOX_DEFAULT)
+        setflag(FLAG_SMART_WILDS)
+        randomelement(1,2,3,4,5,6)
+        if(var(VAR_RESULT) == 1) {
+            setwildbattle(SPECIES_IRON_TREADS, 50)
+        }
+        elif(var(VAR_RESULT) == 2) {
+            setwildbattle(SPECIES_IRON_BUNDLE, 50)
+        }
+        elif(var(VAR_RESULT) == 3) {
+            setwildbattle(SPECIES_IRON_HANDS, 50)
+        }
+        elif(var(VAR_RESULT) == 4) {
+            setwildbattle(SPECIES_IRON_JUGULIS, 50)
+        }
+        elif(var(VAR_RESULT) == 5) {
+            setwildbattle(SPECIES_IRON_MOTH, 50)
+        }
+        else {
+            setwildbattle(SPECIES_IRON_THORNS, 50)
+        }
+        dowildbattle
+        setflag(FLAG_CHOSE_CLAW_FOSSIL)
+        clearflag(FLAG_SMART_WILDS)
+        call(MirageTower_4F_EventScript_CollapseMirageTower)
+    }
+    else {
+
+    }
+    releaseall
+    end
+}

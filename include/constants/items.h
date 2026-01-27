@@ -314,6 +314,7 @@
 #define ITEM_FLOWER_SWEET 242
 #define ITEM_STAR_SWEET 243
 #define ITEM_RIBBON_SWEET 244
+#define ITEM_MOLTEN_METAL 860
 
 #define ITEM_EVERSTONE 245
 
@@ -1029,7 +1030,7 @@
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 860
+#define ITEMS_COUNT 861
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

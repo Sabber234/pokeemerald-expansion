@@ -14160,6 +14160,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_PeatBlock,
     },
 
+    [ITEM_MOLTEN_METAL] =
+    {
+        .name = _("Molten Metal"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "A mysterious case\n"
+            "containing liquid\n"
+            "metal."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_MetalCoat,
+        .iconPalette = gItemIconPalette_MetalCoat,
+    },
+
     [ITEM_BERSERK_GENE] =
     {
         .name = _("Berserk Gene"),

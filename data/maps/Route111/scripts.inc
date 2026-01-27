@@ -1401,7 +1401,7 @@ Route111_Text_MirageTowerHasntBeenSeenSince:
 # 701 "data/maps/Route111/scripts.pory"
 Route111_Text_ClawFossilDisappeared:
 # 702 "data/maps/Route111/scripts.pory"
-	.string "The CLAW FOSSIL disappeared into\n"
+	.string "The VIOLET ROCK disappeared into\n"
 # 703 "data/maps/Route111/scripts.pory"
 	.string "the sand…$"
 # 704 "data/maps/Route111/scripts.pory"
@@ -1409,7 +1409,7 @@ Route111_Text_ClawFossilDisappeared:
 # 705 "data/maps/Route111/scripts.pory"
 Route111_Text_RootFossilDisappeared:
 # 706 "data/maps/Route111/scripts.pory"
-	.string "The ROOT FOSSIL disappeared into\n"
+	.string "The SCARLET ROCK disappeared into\n"
 # 707 "data/maps/Route111/scripts.pory"
 	.string "the sand…$"
 # 708 "data/maps/Route111/scripts.pory"
