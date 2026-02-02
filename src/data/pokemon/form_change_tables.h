@@ -1431,6 +1431,12 @@ static const struct FormChange sTerapagosFormChangeTable[] = {
     {FORM_CHANGE_END_BATTLE,              SPECIES_TERAPAGOS_NORMAL},
     {FORM_CHANGE_TERMINATOR},
 };
+static const struct FormChange sTerapagosTeraFormChangeTable[] = {
+#if P_MEGA_EVOLUTIONS
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_TERAPAGOS_STELLAR, TYPE_STELLAR},
+#endif
+    {FORM_CHANGE_TERMINATOR},
+};
 #endif //P_FAMILY_TERAPAGOS
 
 #undef WHEN_LEARNED

@@ -7968,7 +7968,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_TERA_SHIFT, ABILITY_NONE, ABILITY_CLEAR_BODY },
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_TERA_SHIFT },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Terapagos"),
         .cryId = CRY_TERAPAGOS,
@@ -8017,6 +8017,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sTerapagosTeachableLearnset,
         .formSpeciesIdTable = sTerapagosFormSpeciesIdTable,
         .formChangeTable = sTerapagosFormChangeTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_TERAPAGOS_TERASTAL, CONDITIONS({IF_HOLD_ITEM, ITEM_STELLAR_TERA_SHARD})}),
     },
 
     [SPECIES_TERAPAGOS_TERASTAL] =
@@ -8148,7 +8149,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sTerapagosLevelUpLearnset,
         .teachableLearnset = sTerapagosTeachableLearnset,
         .formSpeciesIdTable = sTerapagosFormSpeciesIdTable,
-        .formChangeTable = sTerapagosFormChangeTable,
+        .formChangeTable = sTerapagosTeraFormChangeTable,
     },
 #endif //P_FAMILY_TERAPAGOS
 
